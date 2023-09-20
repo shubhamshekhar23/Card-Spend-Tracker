@@ -1,6 +1,6 @@
 import styles from "./slide-nav.module.scss";
 
-function ChildButtons({ num, active }) {
+function ChildButtons({ num, active, handleNavClick }) {
   const arr = new Array(num).fill(1);
 
   function isActive(src) {
@@ -13,14 +13,20 @@ function ChildButtons({ num, active }) {
   }
 
   return arr.map((item, index) => {
-    return <button key={index + 1} className={isActive(index + 1)}></button>;
+    return (
+      <button
+        key={index + 1}
+        className={isActive(index + 1)}
+        onClick={() => handleNavClick(index + 1)}
+      ></button>
+    );
   });
 }
 
-export default function SlideNav({ num, active }) {
+export default function SlideNav(props) {
   return (
     <div className={styles.main}>
-      <ChildButtons num={num} active={active} />
+      <ChildButtons {...props} />
     </div>
   );
 }

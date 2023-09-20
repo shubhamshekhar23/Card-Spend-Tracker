@@ -7,7 +7,8 @@
       "@/styles/*": ["styles/*"],
       "@/constants/*": ["data/constants/*"],
       "@/services/*": ["services/*"],
-      "@/mockdata/*": ["data/mockdata/*"]
+      "@/mockdata/*": ["data/mockdata/*"],
+      "@/context/*": ["context/*"]
     }
   }
 }

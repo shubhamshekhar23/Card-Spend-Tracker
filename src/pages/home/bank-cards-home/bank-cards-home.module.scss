@@ -2,7 +2,7 @@
 
 .card_container {
   display: flex;
-  overflow: scroll;
+  overflow: hidden;
   height: 550px;
 }
 .card_container::-webkit-scrollbar {

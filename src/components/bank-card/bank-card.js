@@ -5,18 +5,7 @@ import mastercard from "../../assets/mastercard.svg";
 import contactless from "../../assets/contactless.svg";
 
 export default function BankCard(props) {
-  const data = {
-    id: 1,
-    cardTitle: "Salary Card",
-    balance: 2748,
-    info: {
-      abbv: "CB",
-      bankName: "Universal Bank",
-      number: "5489 7452 5726 9827",
-      expiry: "04/24",
-      type: "mastercard",
-    },
-  };
+  const data = props.data;
 
   function getClassNamesForCard() {
     let classNames = [styles.card];
@@ -30,12 +19,16 @@ export default function BankCard(props) {
 
   return (
     // <main className={styles.main}>
-    <div className={getClassNamesForCard()} onClick={props.onClick}>
+    <div
+      className={getClassNamesForCard()}
+      onClick={props.onClick}
+      id={`card-${data?.id}`}
+    >
       {/* title */}
       <div className={styles.card_heading_section}>
-        <span className={styles.card_abbv}>{data.info.abbv}</span>
+        <span className={styles.card_abbv}>{data?.info?.abbv}</span>
         <span className={styles.card_separator}> | </span>
-        <span className={styles.card_bank_name}> {data.info.bankName} </span>
+        <span className={styles.card_bank_name}> {data?.info?.bankName} </span>
       </div>
 
       {/* symbol */}
@@ -51,11 +44,11 @@ export default function BankCard(props) {
       </div>
 
       {/* card number */}
-      <div className={styles.card_number}>{data.info.number}</div>
+      <div className={styles.card_number}>{data?.info?.number}</div>
 
       {/* footer */}
       <div className={styles.card_footer}>
-        <span className={styles.card_bank_name}>{data.info.expiry}</span>
+        <span className={styles.card_bank_name}>{data?.info?.expiry}</span>
         <div>
           <Image
             priority
