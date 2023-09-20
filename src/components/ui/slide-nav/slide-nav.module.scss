@@ -1,0 +1,20 @@
+@import "src/styles/common.scss";
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.nav_btn {
+  width: 20px;
+  background-color: lightslategray;
+  height: 5px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.active_nav {
+  width: 40px;
+  background-color: white;
+}

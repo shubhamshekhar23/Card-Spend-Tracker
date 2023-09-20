@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import BankCard from "@/components/bank-card/bank-card";
 import { getCardsOfUser } from "@/services/card-api.service";
+import SlideNav from "@/components/ui/slide-nav/slide-nav";
 
 export default function BankCardsHome() {
   let [cards, setCards] = useState([]);
@@ -40,7 +41,7 @@ export default function BankCardsHome() {
           />
         ))}
       </div>
-      <div></div>
+      <SlideNav num={4} active={1} />
     </main>
   );
 }

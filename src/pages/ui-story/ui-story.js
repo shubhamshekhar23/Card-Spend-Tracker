@@ -15,10 +15,12 @@ import RoundPill from "@/ui/round-pill/round-pill";
 import TextButton from "@/ui/text-button/text-button";
 import SquareButton from "@/ui/square-button/square-button";
 import FooterNav from "@/components/footer-nav/footer-nav";
+import SlideNav from "@/components/ui/slide-nav/slide-nav";
 
 export default function UiStory() {
   return (
     <main className={styles.main}>
+      {/* slide nav */}
       {/* footnerNav */}
       <FooterNav />
 
@@ -74,6 +76,8 @@ export default function UiStory() {
         <UilBolt />
         <UilSpaceKey />
       </div>
+
+      <SlideNav num={4} active={1} />
     </main>
   );
 }
