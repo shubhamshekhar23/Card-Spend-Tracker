@@ -1,0 +1,11 @@
+@import "src/styles/common.scss";
+
+.text_button {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid $blue-bay;
+  padding: 15px 25px;
+  color: $blue-cornflower;
+  font-size: 17px;
+  font-weight: 600;
+}

@@ -1,0 +1,10 @@
+@import "src/styles/common.scss";
+
+.square_button {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid $gray-riverbed;
+  padding: 15px;
+  color: white;
+  font-size: 17px;
+}

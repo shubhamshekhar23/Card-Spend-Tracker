@@ -1,0 +1,26 @@
+/* variables */
+$pink: #dd3983;
+$yellow: #efa232;
+$blue: #2773f3;
+$primary-bg: #1c2641;
+
+$blue-dodger: #514ffe; /* gradient base */
+$blue-cornflower: #7352f6; /* gradient base used in text in btn as well*/
+$blue-malibu: #66a3ff; /* gradient to */
+$blue-pickled: #343f5e;
+$blue-chetwood: #7a90d0;
+$blue-frenchpass: #cbe7fd;
+$blue-spindle: #b7c3ed;
+
+/* used in outline btn */
+$blue-bay: #45588f;
+
+/* gray related */
+$gray-riverbed: #444a5f; /* used in outline btn */
+
+/* black related */
+$black-firefly: #091122;
+
+// gradient
+$home-page-gradient: linear-gradient(315deg, $black-firefly, $blue-pickled);
+$footer-gradient: linear-gradient(to top, $black-firefly, $blue-pickled);

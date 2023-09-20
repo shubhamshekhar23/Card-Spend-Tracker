@@ -1,0 +1,26 @@
+@import "src/styles/common.scss";
+
+.footer_nav_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0px;
+  position: absolute;
+  bottom: 0;
+  background: $footer-gradient;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  z-index: 10;
+}
+
+.nav_icon {
+  color: $blue-chetwood;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.icon_active {
+  background: linear-gradient(45deg, $blue-cornflower, $blue-malibu);
+  color: white;
+}

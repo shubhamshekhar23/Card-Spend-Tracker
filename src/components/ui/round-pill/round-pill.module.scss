@@ -1,0 +1,25 @@
+@import "src/styles/common.scss";
+
+.round_pill {
+  background-color: $blue;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+}
+
+.pill_gradient_blue {
+  background: linear-gradient(360deg, $blue-dodger, $blue-malibu);
+}
+
+.pill_pink {
+  background-color: $pink;
+}
+
+.pill_yellow {
+  background-color: $yellow;
+}
+
+.pill_blue {
+  background-color: $blue;
+}

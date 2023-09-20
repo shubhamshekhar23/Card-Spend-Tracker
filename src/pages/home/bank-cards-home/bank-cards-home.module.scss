@@ -1,0 +1,7 @@
+@import "src/styles/common.scss";
+
+.card_container {
+  display: flex;
+  overflow: scroll;
+  height: 700px;
+}
