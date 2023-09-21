@@ -70,17 +70,24 @@ export default function CardDetails() {
 
   return (
     <main className={styles.main}>
-      <UilArrowLeft
-        color="white"
-        onClick={() => router.back()}
-        height={40}
-        width={40}
-      />
+      <div className={styles.header}>
+        <span>
+          <UilArrowLeft
+            color="white"
+            onClick={() => router.back()}
+            height={40}
+            width={40}
+          />
+        </span>
+        <h3 className={classForTitle()}>Salary Card</h3>
+      </div>
       <h1 className={classForTitle()}>Salary Card</h1>
-      <BankCard className={styles.bank_card} data={card} />
+      <div className={sliderPosition != 0 ? styles.balance_share_up : ""}>
+        <BankCard className={styles.bank_card} data={card} />
 
-      {/* balance share section */}
-      <BalanceShareSection card={card} />
+        {/* balance share section */}
+        <BalanceShareSection card={card} />
+      </div>
 
       {/* history panel */}
       <div className={classForSliderPanel()}>
