@@ -27,26 +27,31 @@ export const bankCardListMockData = [
 
 export const debtCatalogueMockData = [
   {
+    id: 1,
     title: "Mobile",
     amount: 34,
     type: 0,
   },
   {
+    id: 2,
     title: "Internet and Tv",
     amount: 34,
     type: 1,
   },
   {
+    id: 3,
     title: "Mobile 3",
     amount: 34,
     type: 2,
   },
   {
+    id: 4,
     title: "Mobile 4",
     amount: 34,
     type: 3,
   },
   {
+    id: 5,
     title: "Mobile 5",
     amount: 34,
     type: 4,

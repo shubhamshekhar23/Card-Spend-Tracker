@@ -16,34 +16,39 @@ import RoundPill from "@/ui/round-pill/round-pill";
     timestamp: "2023-09-19T12:30:45Z",
     type: 0,
   }
-
 */
 
+export default function History() {
+  let [historyData, setHistoryData] = useState({});
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await getTransactionHistory();
+      let mapData = arrangeHistoryByDate(response);
+      setHistoryData(mapData);
+    }
+    fetchData();
+  }, []);
+
+  return (
+    <main className={styles.main}>
+      <TransactionByDate data={historyData} />
+    </main>
+  );
+}
+
 function TransactionTypeButton({ type }) {
-  function getRightButtonBasedOnType(type) {
-    if (type == TRANSACTION_TYPE.card2card) {
-      return (
-        <RoundPill color="pink">
-          <UilShare color="white" />
-        </RoundPill>
-      );
-    }
-    if (type == TRANSACTION_TYPE.music) {
-      return (
-        <RoundPill color="yellow">
-          <UilMusicNote color="white" />
-        </RoundPill>
-      );
-    }
-    if (type == TRANSACTION_TYPE.vehicle) {
-      return (
-        <RoundPill gradient="blue">
-          <UilCar color="white" />
-        </RoundPill>
-      );
-    }
-  }
-  return <>{getRightButtonBasedOnType(type)}</>;
+  const btnMap = {
+    [TRANSACTION_TYPE.card2card]: <UilShare color="white" />,
+    [TRANSACTION_TYPE.music]: <UilMusicNote color="white" />,
+    [TRANSACTION_TYPE.vehicle]: <UilCar color="white" />,
+  };
+  const btnColor = {
+    [TRANSACTION_TYPE.card2card]: "pink",
+    [TRANSACTION_TYPE.music]: "yellow",
+    [TRANSACTION_TYPE.vehicle]: "blue",
+  };
+  return <RoundPill color={btnColor[type]}>{btnMap[type]}</RoundPill>;
 }
 
 function TransactionItem({ data }) {
@@ -82,24 +87,5 @@ function TransactionByDate({ data }) {
         );
       })}
     </>
-  );
-}
-
-export default function History() {
-  let [historyData, setHistoryData] = useState({});
-
-  useEffect(() => {
-    async function fetchData() {
-      const response = await getTransactionHistory();
-      let mapData = arrangeHistoryByDate(response);
-      setHistoryData(mapData);
-    }
-    fetchData();
-  }, []);
-
-  return (
-    <main className={styles.main}>
-      <TransactionByDate data={historyData} />
-    </main>
   );
 }
