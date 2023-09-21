@@ -30,12 +30,13 @@ export default function Home() {
   }
 
   return (
-    <main className={styles.main}>
-      {/* screen choice */}
-      {getCorrectScreen()}
-
+    <>
+      <main className={styles.main}>
+        {/* screen choice */}
+        {getCorrectScreen()}
+      </main>
       {/* footer nav */}
       <FooterNav clickHandler={makeActiveScreen} activeScreen={activeScreen} />
-    </main>
+    </>
   );
 }
