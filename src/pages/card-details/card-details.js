@@ -64,12 +64,18 @@ export default function CardDetails() {
   }
 
   function classForTitle() {
-    if (sliderPosition !== 0) return styles.title_complete_slider;
-    return "";
+    if (sliderPosition !== 0) return styles.title_up;
+    else return styles.title_down;
+  }
+
+  function classForBalanceShareSection() {
+    if (sliderPosition !== 0) return styles.balance_share_up;
+    else return styles.balance_share_down;
   }
 
   return (
     <main className={styles.main}>
+      {/* header section */}
       <div className={styles.header}>
         <span>
           <UilArrowLeft
@@ -81,11 +87,13 @@ export default function CardDetails() {
         </span>
         <h3 className={classForTitle()}>Salary Card</h3>
       </div>
-      <h1 className={classForTitle()}>Salary Card</h1>
-      <div className={sliderPosition != 0 ? styles.balance_share_up : ""}>
-        <BankCard className={styles.bank_card} data={card} />
 
-        {/* balance share section */}
+      {/* title */}
+      <h1 className={classForTitle()}>Salary Card</h1>
+
+      {/* balance share section */}
+      <div className={classForBalanceShareSection()}>
+        <BankCard className={styles.bank_card} data={card} />
         <BalanceShareSection card={card} />
       </div>
 

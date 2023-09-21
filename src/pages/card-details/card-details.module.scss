@@ -58,6 +58,11 @@
   transform: translateY(-20%);
 }
 
+.balance_share_down {
+  transition: all 1s ease-in;
+  transform: translateY(0%);
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -78,14 +83,22 @@
   }
 }
 
-h3.title_complete_slider {
+h3.title_up {
   animation: fade-in 1s both;
   font-size: 20px;
   margin-bottom: 20px;
 }
 
-h1.title_complete_slider {
+h1.title_up {
   animation: fade-out 1s both;
+}
+
+h3.title_down {
+  animation: fade-out 1s both;
+}
+
+h1.title_down {
+  animation: fade-in 3s both;
 }
 
 .slider_btn {
