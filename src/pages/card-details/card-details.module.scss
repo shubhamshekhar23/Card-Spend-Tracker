@@ -1,9 +1,62 @@
+@import "src/styles/common.scss";
+
 .main {
   padding: 20px;
+  position: relative;
 }
 
 .balance_share {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.slider_panel {
+  background: $blue-cloudburst;
+  border-top: 1px solid lightslategray;
+  border-radius: 25px;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100%;
+  top: 60%;
+  transition: top 0.5s ease-in;
+}
+
+.slider_panel::-webkit-scrollbar {
+  display: none;
+}
+
+.slider_panel_level_one {
+  top: 40%;
+}
+
+.slider_panel_level_two {
+  top: 8%;
+  overflow: scroll;
+}
+
+.title_complete_slider {
+  font-size: 20px;
+  position: absolute;
+  left: 35%;
+  top: 15px;
+  margin-bottom: 20px;
+}
+
+.slider_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.nav_btn {
+  width: 50px;
+  background-color: lightslategray;
+  height: 5px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
 }
