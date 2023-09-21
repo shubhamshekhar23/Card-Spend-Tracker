@@ -15,3 +15,7 @@ export const getDebtCatalogue = async () => {
 export const getTransactionHistory = async () => {
   return Promise.resolve(transactionHistoryMockData);
 };
+
+export const getTransactionHistoryOfCard = async (id) => {
+  return Promise.resolve(transactionHistoryMockData);
+};

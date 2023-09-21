@@ -12,23 +12,12 @@ import {
   UilBolt,
 } from "@iconscout/react-unicons";
 
-/* 
-  {
-    id: 1,
-    title: "Mobile",
-    amount: 34,
-    type: 0,
-  }
-
-*/
-
 export default function Catalogue() {
   let [catalogueData, setCatalogueData] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       const response = await getDebtCatalogue();
-      console.log(response);
       setCatalogueData(response);
     }
     fetchData();
@@ -36,6 +25,7 @@ export default function Catalogue() {
 
   return (
     <main className={styles.main}>
+      <h1>Catalogue</h1>
       <TransactionList data={catalogueData} />
     </main>
   );
