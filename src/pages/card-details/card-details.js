@@ -13,11 +13,16 @@ import { arrangeHistoryByDate } from "@/services/util.service";
 import TransactionHistory from "@/components/transaction-history/transaction-history";
 import SquareButton from "@/ui/square-button/square-button";
 import { UilShare, UilHistory } from "@iconscout/react-unicons";
+import {
+  classForSliderPanel,
+  classForTitle,
+  classForBalanceShareSection,
+} from "./class-provider.service";
 
 export default function CardDetails() {
   const { cardsData, setCardsData } = useContext(Cards_data);
   let [historyData, setHistoryData] = useState({});
-  let [sliderPosition, setSliderPosition] = useState(0); // can hahve 0,1,2
+  let [sliderPosition, setSliderPosition] = useState(-1); // can hahve 0,1,2
 
   const [card, setCard] = useState({});
   const router = useRouter();
@@ -47,30 +52,9 @@ export default function CardDetails() {
   }, [card]);
 
   function sliderButtonClick() {
-    if (sliderPosition == 2) setSliderPosition(0);
+    if (sliderPosition == -1) setSliderPosition(1);
+    else if (sliderPosition == 2) setSliderPosition(0);
     else setSliderPosition(sliderPosition + 1);
-  }
-
-  function classForSliderPanel() {
-    let classNames = [styles.slider_panel];
-
-    if (sliderPosition == 1) {
-      classNames.push(styles.slider_panel_level_one);
-    }
-    if (sliderPosition == 2) {
-      classNames.push(styles.slider_panel_level_two);
-    }
-    return classNames.join(" ");
-  }
-
-  function classForTitle() {
-    if (sliderPosition !== 0) return styles.title_up;
-    else return styles.title_down;
-  }
-
-  function classForBalanceShareSection() {
-    if (sliderPosition !== 0) return styles.balance_share_up;
-    else return styles.balance_share_down;
   }
 
   return (
@@ -85,20 +69,20 @@ export default function CardDetails() {
             width={40}
           />
         </span>
-        <h3 className={classForTitle()}>Salary Card</h3>
+        <h3 className={classForTitle(sliderPosition)}>Salary Card</h3>
       </div>
 
       {/* title */}
-      <h1 className={classForTitle()}>Salary Card</h1>
+      <h1 className={classForTitle(sliderPosition)}>Salary Card</h1>
 
       {/* balance share section */}
-      <div className={classForBalanceShareSection()}>
+      <div className={classForBalanceShareSection(sliderPosition)}>
         <BankCard className={styles.bank_card} data={card} />
         <BalanceShareSection card={card} />
       </div>
 
       {/* history panel */}
-      <div className={classForSliderPanel()}>
+      <div className={classForSliderPanel(sliderPosition)}>
         <div className={styles.slider_btn}>
           <button
             className={styles.nav_btn}
