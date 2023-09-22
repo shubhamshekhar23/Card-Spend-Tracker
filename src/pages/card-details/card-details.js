@@ -82,12 +82,12 @@ export default function CardDetails() {
       </div>
 
       {/* history panel */}
-      <div className={classForSliderPanel(sliderPosition)}>
+      <div
+        className={classForSliderPanel(sliderPosition)}
+        onClick={sliderButtonClick}
+      >
         <div className={styles.slider_btn}>
-          <button
-            className={styles.nav_btn}
-            onClick={sliderButtonClick}
-          ></button>
+          <button className={styles.nav_btn}></button>
         </div>
         <TransactionHistory data={historyData} />
       </div>
