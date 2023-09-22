@@ -29,7 +29,7 @@ export default function History() {
   }, []);
 
   return (
-    <main className={styles.main}>
+    <main className={styles.smoothly_appear}>
       <h1>History</h1>
       <TransactionHistory data={historyData} />
     </main>

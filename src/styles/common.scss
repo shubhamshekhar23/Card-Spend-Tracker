@@ -27,3 +27,18 @@ $black-firefly: #091122;
 // gradient
 $home-page-gradient: linear-gradient(315deg, $black-firefly, $blue-pickled);
 $footer-gradient: linear-gradient(to top, $black-firefly, $blue-pickled);
+
+/* CLASSES */
+.smoothly_appear {
+  animation: smoothly-appear 1s ease-out;
+}
+
+/* ANIMATION */
+@keyframes smoothly-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

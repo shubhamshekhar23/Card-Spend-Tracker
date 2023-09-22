@@ -24,7 +24,7 @@ export default function Catalogue() {
   }, []);
 
   return (
-    <main className={styles.main}>
+    <main className={styles.smoothly_appear}>
       <h1>Catalogue</h1>
       <TransactionList data={catalogueData} />
     </main>
