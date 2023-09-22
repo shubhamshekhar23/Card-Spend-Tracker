@@ -22,7 +22,20 @@
 .balance_share {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
+  margin-top: 20px;
+  h5 {
+    margin: 10px 0;
+    color: $blue-polo;
+    font-size: 18px;
+  }
+  h2 {
+    margin: 0;
+  }
+  .btn_group {
+    display: flex;
+    gap: 10px;
+  }
 }
 
 .slider_panel {

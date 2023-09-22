@@ -18,6 +18,7 @@ import {
   classForTitle,
   classForBalanceShareSection,
 } from "./class-provider.service";
+import { formattedAmount } from "@/services/util.service";
 
 export default function CardDetails() {
   const { cardsData, setCardsData } = useContext(Cards_data);
@@ -99,10 +100,10 @@ function BalanceShareSection({ card }) {
   return (
     <div className={styles.balance_share}>
       <div>
-        <h4>Balance</h4>
-        <h2>{card.balance}</h2>
+        <h5>Balance</h5>
+        <h2>{formattedAmount(card.balance)}</h2>
       </div>
-      <div>
+      <div className={styles.btn_group}>
         <SquareButton>
           <UilHistory color="white" />
         </SquareButton>
