@@ -3,7 +3,8 @@
 .card_container {
   display: flex;
   overflow: hidden;
-  height: 480px;
+  height: 56vh;
+  padding-top: 70%;
 }
 .card_container::-webkit-scrollbar {
   display: none;

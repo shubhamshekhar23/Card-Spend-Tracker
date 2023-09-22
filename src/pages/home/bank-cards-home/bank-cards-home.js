@@ -43,10 +43,12 @@ export default function BankCardsHome() {
   const router = useRouter();
   return (
     <main className={styles.smoothly_appear}>
-      <h1>Bank</h1>
-      <h1>Cards</h1>
-      <h5>Balance</h5>
-      <h2>{getAmount()}</h2>
+      <div style={{ position: "fixed" }}>
+        <h1>Bank</h1>
+        <h1>Cards</h1>
+        <h5>Balance</h5>
+        <h2>{getAmount()}</h2>
+      </div>
       <div className={styles.card_container}>
         {cards.map((item) => (
           <div key={item.id} className={styles.bank_card_item}>
