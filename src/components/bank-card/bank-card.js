@@ -20,7 +20,7 @@ export default function BankCard(props) {
   return (
     // <main className={styles.main}>
     <div
-      className={getClassNamesForCard()}
+      className={`${props.className} ${getClassNamesForCard()}`}
       onClick={props.onClick}
       id={`card-${data?.id}`}
     >

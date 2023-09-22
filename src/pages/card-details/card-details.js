@@ -101,7 +101,7 @@ function BalanceShareSection({ card }) {
     <div className={styles.balance_share}>
       <div>
         <h5>Balance</h5>
-        <h2>{formattedAmount(card.balance)}</h2>
+        <h2>{formattedAmount(card.balance || 0)}</h2>
       </div>
       <div className={styles.btn_group}>
         <SquareButton>
