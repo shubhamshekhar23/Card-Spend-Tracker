@@ -43,7 +43,7 @@ export default function BankCardsHome() {
   const router = useRouter();
   return (
     <main className={styles.smoothly_appear}>
-      <div style={{ position: "fixed" }}>
+      <div className={styles.card_title_Section}>
         <h1>Bank</h1>
         <h1>Cards</h1>
         <h5>Balance</h5>

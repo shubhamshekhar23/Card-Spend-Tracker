@@ -1,5 +1,9 @@
 @import "src/styles/common.scss";
 
+.card_title_Section {
+  position: fixed;
+}
+
 .card_container {
   display: flex;
   overflow: hidden;
