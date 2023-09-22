@@ -27,11 +27,13 @@ export default function Catalogue() {
 
   return (
     <main className={styles.smoothly_appear}>
-      <div className={styles.screen_title}>
-        <h1>Catalogue</h1>
-        <UserImage />
+      <div className={styles.catalogue_container}>
+        <div className={styles.screen_title}>
+          <h1>Catalogue</h1>
+          <UserImage />
+        </div>
+        <TransactionList data={catalogueData} />
       </div>
-      <TransactionList data={catalogueData} />
     </main>
   );
 }
