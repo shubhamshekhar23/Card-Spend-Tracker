@@ -3,14 +3,14 @@
 @keyframes rotateClock {
   100% {
     transform: rotate(-90deg) translateX(-30%);
-    scale: 1.4;
+    scale: 1.2;
   }
 }
 
 @keyframes rotateAntiClock {
   0% {
     transform: rotate(-90deg) translateX(-30%);
-    scale: 1.4;
+    scale: 1.2;
   }
   100% {
     scale: 1;
@@ -19,15 +19,17 @@
 }
 
 .card {
-  width: 300px;
-  min-width: 300px;
-  height: 175px;
-  min-height: 175px;
+  // width: 300px;
+  // min-width: 300px;
+  height: 220px;
+  min-height: 220px;
+  aspect-ratio: 1.6;
   background: darkslategray;
   border-radius: 15px;
   color: white;
-  font-size: 25px;
-  padding: 33px;
+  font-size: 20px;
+  padding: 6%;
+  box-sizing: border-box;
 }
 
 .card_vertical {

@@ -43,23 +43,25 @@ export default function BankCardsHome() {
   const router = useRouter();
   return (
     <main className={styles.main}>
-      <h1>Bank Cards</h1>
+      <h1>Bank</h1>
+      <h1>Cards</h1>
       <h5>Balance</h5>
       <h2>{getAmount()}</h2>
       <div className={styles.card_container}>
         {cards.map((item) => (
-          <BankCard
-            key={item.id}
-            onClick={() =>
-              router.push({
-                pathname: "/card-details",
-                query: { id: item.id },
-              })
-            }
-            className={styles.bank_card}
-            data={item}
-            isVertical={true}
-          />
+          <div key={item.id} className={styles.bank_card_item}>
+            <BankCard
+              onClick={() =>
+                router.push({
+                  pathname: "/card-details",
+                  query: { id: item.id },
+                })
+              }
+              className={styles.bank_card}
+              data={item}
+              isVertical={true}
+            />
+          </div>
         ))}
       </div>
       <SlideNav
