@@ -11,6 +11,7 @@ import {
   UilWifi,
   UilBolt,
 } from "@iconscout/react-unicons";
+import UserImage from "@/components/user-image/user-image";
 
 export default function Catalogue() {
   let [catalogueData, setCatalogueData] = useState([]);
@@ -25,7 +26,10 @@ export default function Catalogue() {
 
   return (
     <main className={styles.smoothly_appear}>
-      <h1>Catalogue</h1>
+      <div className={styles.screen_title}>
+        <h1>Catalogue</h1>
+        <UserImage />
+      </div>
       <TransactionList data={catalogueData} />
     </main>
   );

@@ -3,18 +3,7 @@ import { useState, useEffect } from "react";
 import { getTransactionHistory } from "@/services/card-api.service";
 import { arrangeHistoryByDate } from "@/services/util.service";
 import TransactionHistory from "@/components/transaction-history/transaction-history";
-
-/* 
-  {
-    transactionId: 1,
-    name: "card to card",
-    details: "Maria",
-    amount: 100.5,
-    info: "credit",
-    timestamp: "2023-09-19T12:30:45Z",
-    type: 0,
-  }
-*/
+import UserImage from "@/components/user-image/user-image";
 
 export default function History() {
   let [historyData, setHistoryData] = useState({});
@@ -30,7 +19,10 @@ export default function History() {
 
   return (
     <main className={styles.smoothly_appear}>
-      <h1>History</h1>
+      <div className={styles.screen_title}>
+        <h1>History</h1>
+        <UserImage />
+      </div>
       <TransactionHistory data={historyData} isAnimate={true} />
     </main>
   );

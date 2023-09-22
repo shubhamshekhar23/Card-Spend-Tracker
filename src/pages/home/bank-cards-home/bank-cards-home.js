@@ -6,6 +6,7 @@ import { getCardsOfUser } from "@/services/card-api.service";
 import SlideNav from "@/components/ui/slide-nav/slide-nav";
 import { Cards_data } from "@/context/context";
 import { useContext } from "react";
+import UserImage from "@/components/user-image/user-image";
 
 export default function BankCardsHome() {
   const { cardsData, setCardsData } = useContext(Cards_data);
@@ -44,7 +45,10 @@ export default function BankCardsHome() {
   return (
     <main className={styles.smoothly_appear}>
       <div className={styles.card_title_Section}>
-        <h1>Bank</h1>
+        <div className={styles.screen_title}>
+          <h1>Bank</h1>
+          <UserImage />
+        </div>
         <h1>Cards</h1>
         <h5>Balance</h5>
         <h2>{getAmount()}</h2>
