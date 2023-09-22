@@ -12,6 +12,7 @@ import {
   UilBolt,
 } from "@iconscout/react-unicons";
 import UserImage from "@/components/user-image/user-image";
+import { formattedAmount } from "@/services/util.service";
 
 export default function Catalogue() {
   let [catalogueData, setCatalogueData] = useState([]);
@@ -54,7 +55,7 @@ function TransactionItem({ data }) {
       <div className={styles.details_amount}>
         <div className={styles.transaction__description}>
           <h3>{data.title}</h3>
-          <h4>The debt is {data.amount}</h4>
+          <h4>The debt is {formattedAmount(data.amount)}</h4>
         </div>
         <TextButton>Pay</TextButton>
       </div>

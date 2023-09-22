@@ -7,6 +7,7 @@ import SlideNav from "@/components/ui/slide-nav/slide-nav";
 import { Cards_data } from "@/context/context";
 import { useContext } from "react";
 import UserImage from "@/components/user-image/user-image";
+import { formattedAmount } from "@/services/util.service";
 
 export default function BankCardsHome() {
   const { cardsData, setCardsData } = useContext(Cards_data);
@@ -27,7 +28,7 @@ export default function BankCardsHome() {
     cards.forEach((item) => {
       amount += item.balance;
     });
-    return amount;
+    return formattedAmount(amount);
   }
 
   function handleNavClick(itemIndexClicked) {

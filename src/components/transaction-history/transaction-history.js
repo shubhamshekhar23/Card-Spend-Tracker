@@ -2,6 +2,7 @@ import styles from "./transaction-history.module.scss";
 import { TRANSACTION_TYPE } from "@/constants/entity.constants";
 import { UilShare, UilCar, UilMusicNote } from "@iconscout/react-unicons";
 import RoundPill from "@/ui/round-pill/round-pill";
+import { formattedAmount } from "@/services/util.service";
 
 export default function TransactionHistory({ data, isAnimate }) {
   return (
@@ -26,6 +27,13 @@ function TransactionTypeButton({ type }) {
 }
 
 function TransactionItem({ data }) {
+  function getFormatAmount(amount, info) {
+    let str = formattedAmount(amount);
+    if (info == "debit") {
+      return "- " + str;
+    }
+    return str;
+  }
   return (
     <div className={styles.transaction_section}>
       <TransactionTypeButton type={data.type} />
@@ -34,7 +42,7 @@ function TransactionItem({ data }) {
           <h3>{data.name}</h3>
           <h4>{data.details}</h4>
         </div>
-        <h3>{data.amount}</h3>
+        <h3>{getFormatAmount(data.amount, data.info)}</h3>
       </div>
     </div>
   );
