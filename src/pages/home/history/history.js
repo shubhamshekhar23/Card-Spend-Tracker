@@ -31,7 +31,7 @@ export default function History() {
   return (
     <main className={styles.smoothly_appear}>
       <h1>History</h1>
-      <TransactionHistory data={historyData} />
+      <TransactionHistory data={historyData} isAnimate={true} />
     </main>
   );
 }

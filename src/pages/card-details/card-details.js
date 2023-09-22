@@ -58,7 +58,7 @@ export default function CardDetails() {
   }
 
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} ${styles.smoothly_appear}`}>
       {/* header section */}
       <div className={styles.header}>
         <span>

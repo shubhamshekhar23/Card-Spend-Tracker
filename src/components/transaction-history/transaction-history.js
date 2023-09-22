@@ -3,10 +3,10 @@ import { TRANSACTION_TYPE } from "@/constants/entity.constants";
 import { UilShare, UilCar, UilMusicNote } from "@iconscout/react-unicons";
 import RoundPill from "@/ui/round-pill/round-pill";
 
-export default function TransactionHistory({ data }) {
+export default function TransactionHistory({ data, isAnimate }) {
   return (
     <main className={styles.main}>
-      <TransactionByDate data={data} />
+      <TransactionByDate data={data} isAnimate={isAnimate} />
     </main>
   );
 }
@@ -40,23 +40,30 @@ function TransactionItem({ data }) {
   );
 }
 
-function TransactionList({ data }) {
+function TransactionList({ data, isAnimate }) {
   function getList() {
     return data.map((item) => {
-      return <TransactionItem key={item.id} data={item} />;
+      return (
+        <div
+          key={item.id}
+          className={isAnimate ? styles.transaction_section_animate : null}
+        >
+          <TransactionItem data={item} />
+        </div>
+      );
     });
   }
   return <>{getList()}</>;
 }
 
-function TransactionByDate({ data }) {
+function TransactionByDate({ data, isAnimate }) {
   return (
     <>
       {Object.keys(data).map((item, index) => {
         return (
           <div key={index}>
             <h2 className={styles.date_title}>{item}</h2>
-            <TransactionList data={data[item]} />
+            <TransactionList data={data[item]} isAnimate={isAnimate} />
           </div>
         );
       })}
