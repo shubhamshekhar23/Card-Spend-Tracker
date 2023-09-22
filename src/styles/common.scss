@@ -1,9 +1,15 @@
 /* variables */
 $pink: #dd3983;
+$pink-wisteria: #a460a8;
+
 $yellow: #efa232;
-$blue: #2773f3;
+$yellow-flamepea: #d76931;
+$yellow-apricot: #eb8377;
+$yellow-rajah: #f7c07a;
+
 $primary-bg: #1c2641;
 
+$blue: #2773f3;
 $blue-dodger: #514ffe; /* gradient base */
 $blue-cornflower: #7352f6; /* gradient base used in text in btn as well*/
 $blue-malibu: #66a3ff; /* gradient to */
@@ -14,6 +20,7 @@ $blue-spindle: #b7c3ed;
 $blue-rhino: #2d3757;
 $blue-polo: #92a0d1;
 $blue-cloudburst: #1c2641;
+$blue-ribbon: #1e5ef3;
 
 /* used in outline btn */
 $blue-bay: #45588f;
@@ -27,6 +34,18 @@ $black-firefly: #091122;
 // gradient
 $home-page-gradient: linear-gradient(315deg, $black-firefly, $blue-pickled);
 $footer-gradient: linear-gradient(to top, $black-firefly, $blue-pickled);
+$pink-blue-card-gradient: linear-gradient(
+  45deg,
+  $pink-wisteria,
+  $blue-malibu,
+  $blue-ribbon
+);
+$orange-yellow-card-gradient: linear-gradient(
+  45deg,
+  $yellow-flamepea,
+  $yellow-apricot,
+  $yellow-rajah
+);
 
 /* CLASSES */
 .smoothly_appear {

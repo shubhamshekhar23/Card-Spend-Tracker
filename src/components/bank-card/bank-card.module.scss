@@ -22,12 +22,19 @@
   height: 220px;
   min-height: 220px;
   aspect-ratio: 1.6;
-  background: darkslategray;
   border-radius: 15px;
   color: white;
   font-size: 20px;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.card_mastercard_gradient_color {
+  background: $pink-blue-card-gradient;
+}
+
+.card_visa_gradient_color {
+  background: $orange-yellow-card-gradient;
 }
 
 .card_vertical {

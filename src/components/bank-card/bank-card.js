@@ -9,6 +9,11 @@ export default function BankCard(props) {
 
   function getClassNamesForCard() {
     let classNames = [styles.card];
+    if (data?.info?.type == "mastercard") {
+      classNames.push(styles.card_mastercard_gradient_color);
+    } else {
+      classNames.push(styles.card_visa_gradient_color);
+    }
     if (props.isVertical) {
       classNames.push(styles.card_vertical);
     } else {
@@ -18,7 +23,6 @@ export default function BankCard(props) {
   }
 
   return (
-    // <main className={styles.main}>
     <div
       className={`${props.className} ${getClassNamesForCard()}`}
       onClick={props.onClick}
@@ -61,6 +65,5 @@ export default function BankCard(props) {
         </div>
       </div>
     </div>
-    // </main>
   );
 }
