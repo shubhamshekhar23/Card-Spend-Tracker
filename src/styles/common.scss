@@ -21,9 +21,7 @@ $blue-rhino: #2d3757;
 $blue-polo: #92a0d1;
 $blue-cloudburst: #1c2641;
 $blue-ribbon: #1e5ef3;
-
-/* used in outline btn */
-$blue-bay: #45588f;
+$blue-bay: #45588f; /* used in outline btn */
 
 /* gray related */
 $gray-riverbed: #444a5f; /* used in outline btn */
@@ -31,7 +29,7 @@ $gray-riverbed: #444a5f; /* used in outline btn */
 /* black related */
 $black-firefly: #091122;
 
-// gradient
+/* GRADIENTS */
 $home-page-gradient: linear-gradient(315deg, $black-firefly, $blue-pickled);
 $footer-gradient: linear-gradient(to top, $black-firefly, $blue-pickled);
 $pink-blue-card-gradient: linear-gradient(
