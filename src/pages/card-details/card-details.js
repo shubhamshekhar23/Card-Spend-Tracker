@@ -61,17 +61,10 @@ export default function CardDetails() {
   return (
     <main className={`${styles.main} ${styles.smoothly_appear}`}>
       {/* header section */}
-      <div className={styles.header}>
-        <span>
-          <UilArrowLeft
-            color="white"
-            onClick={() => router.back()}
-            height={40}
-            width={40}
-          />
-        </span>
-        <h3 className={classForTitle(sliderPosition)}>Salary Card</h3>
-      </div>
+      <CardDetailsTitle
+        sliderPosition={sliderPosition}
+        back={router.back}
+      ></CardDetailsTitle>
 
       {/* title */}
       <h1 className={classForTitle(sliderPosition)}>Salary Card</h1>
@@ -83,15 +76,11 @@ export default function CardDetails() {
       </div>
 
       {/* history panel */}
-      <div
-        className={classForSliderPanel(sliderPosition)}
-        onClick={sliderButtonClick}
-      >
-        <div className={styles.slider_btn}>
-          <button className={styles.nav_btn}></button>
-        </div>
-        <TransactionHistory data={historyData} />
-      </div>
+      <HistoryPanel
+        historyData={historyData}
+        sliderPosition={sliderPosition}
+        sliderButtonClick={sliderButtonClick}
+      ></HistoryPanel>
     </main>
   );
 }
@@ -111,6 +100,36 @@ function BalanceShareSection({ card }) {
           <UilShare color="white" />
         </SquareButton>
       </div>
+    </div>
+  );
+}
+
+function CardDetailsTitle(props) {
+  return (
+    <div className={styles.header}>
+      <span>
+        <UilArrowLeft
+          color="white"
+          onClick={() => props.back()}
+          height={40}
+          width={40}
+        />
+      </span>
+      <h3 className={classForTitle(props.sliderPosition)}>Salary Card</h3>
+    </div>
+  );
+}
+
+function HistoryPanel(props) {
+  return (
+    <div
+      className={classForSliderPanel(props.sliderPosition)}
+      onClick={props.sliderButtonClick}
+    >
+      <div className={styles.slider_btn}>
+        <button className={styles.nav_btn}></button>
+      </div>
+      <TransactionHistory data={props.historyData} />
     </div>
   );
 }
