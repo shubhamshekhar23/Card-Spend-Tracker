@@ -29,41 +29,64 @@ export default function BankCard(props) {
       id={`card-${data?.id}`}
     >
       {/* title */}
-      <div className={styles.card_heading_section}>
-        <span className={styles.card_abbv}>{data?.info?.abbv}</span>
-        <span className={styles.card_separator}> | </span>
-        <span className={styles.card_bank_name}> {data?.info?.bankName} </span>
-      </div>
+      <CardTitle data={data}></CardTitle>
 
       {/* symbol */}
-      <div className={styles.card_symbol_section}>
-        <span className={styles.card_square}></span>
-        <Image
-          priority
-          className={styles.card_logo}
-          src={contactless}
-          alt="contactless payment"
-          height={40}
-        />
-      </div>
+      <CardSymbol></CardSymbol>
 
       {/* card number */}
       <div className={styles.card_number}>{data?.info?.number}</div>
 
       {/* footer */}
-      <div className={styles.card_footer}>
-        <span className={styles.card_bank_name}>{data?.info?.expiry}</span>
-        <div>
-          <Image
-            priority
-            className={styles.card_logo}
-            src={mastercard}
-            alt="mastercard logo"
-            height={40}
-          />
-          <p>mastercard</p>
-        </div>
+      <CardFooter data={data}></CardFooter>
+    </div>
+  );
+}
+
+/* internal components */
+
+function CardFooter(props) {
+  return (
+    <div className={styles.card_footer}>
+      <span className={styles.card_bank_name}>{props.data?.info?.expiry}</span>
+      <div>
+        <Image
+          priority
+          className={styles.card_logo}
+          src={mastercard}
+          alt="mastercard logo"
+          height={40}
+        />
+        <p>mastercard</p>
       </div>
+    </div>
+  );
+}
+
+function CardSymbol() {
+  return (
+    <div className={styles.card_symbol_section}>
+      <span className={styles.card_square}></span>
+      <Image
+        priority
+        className={styles.card_logo}
+        src={contactless}
+        alt="contactless payment"
+        height={40}
+      />
+    </div>
+  );
+}
+
+function CardTitle(props) {
+  return (
+    <div className={styles.card_heading_section}>
+      <span className={styles.card_abbv}>{props.data?.info?.abbv}</span>
+      <span className={styles.card_separator}> | </span>
+      <span className={styles.card_bank_name}>
+        {" "}
+        {props.data?.info?.bankName}{" "}
+      </span>
     </div>
   );
 }
