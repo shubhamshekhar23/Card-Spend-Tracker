@@ -15,7 +15,7 @@ import UserImage from "@/components/user-image/user-image";
 import { formattedAmount } from "@/services/util.service";
 
 export default function Catalogue() {
-  let [catalogueData, setCatalogueData] = useState([]);
+  const [catalogueData, setCatalogueData] = useState([]);
 
   useEffect(() => {
     async function fetchData() {

@@ -8,7 +8,7 @@ import Menu from "./menu/menu";
 import { SCREEN_TYPE } from "@/constants/screen.constants";
 
 export default function Home() {
-  let [activeScreen, setActiveScreen] = useState(SCREEN_TYPE.home);
+  const [activeScreen, setActiveScreen] = useState(SCREEN_TYPE.home);
 
   function getCorrectScreen() {
     switch (activeScreen) {

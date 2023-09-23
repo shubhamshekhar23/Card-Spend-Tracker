@@ -6,7 +6,7 @@ import TransactionHistory from "@/components/transaction-history/transaction-his
 import UserImage from "@/components/user-image/user-image";
 
 export default function History() {
-  let [historyData, setHistoryData] = useState({});
+  const [historyData, setHistoryData] = useState({});
 
   useEffect(() => {
     async function fetchData() {

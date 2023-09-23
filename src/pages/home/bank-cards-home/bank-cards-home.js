@@ -11,8 +11,8 @@ import { formattedAmount } from "@/services/util.service";
 
 export default function BankCardsHome() {
   const { cardsData, setCardsData } = useContext(Cards_data);
-  let [cards, setCards] = useState([]);
-  let [activeCard, setActiveCard] = useState(1);
+  const [cards, setCards] = useState([]);
+  const [activeCard, setActiveCard] = useState(1);
 
   useEffect(() => {
     async function fetchData() {

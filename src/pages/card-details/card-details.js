@@ -22,8 +22,8 @@ import { formattedAmount } from "@/services/util.service";
 
 export default function CardDetails() {
   const { cardsData, setCardsData } = useContext(Cards_data);
-  let [historyData, setHistoryData] = useState({});
-  let [sliderPosition, setSliderPosition] = useState(-1); // can hahve 0,1,2
+  const [historyData, setHistoryData] = useState({});
+  const [sliderPosition, setSliderPosition] = useState(-1); // can hahve 0,1,2
 
   const [card, setCard] = useState({});
   const router = useRouter();
