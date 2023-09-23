@@ -45,37 +45,52 @@ export default function BankCardsHome() {
   const router = useRouter();
   return (
     <main className={styles.smoothly_appear}>
-      <div className={styles.card_title_Section}>
-        <div className={styles.screen_title}>
-          <h1>Bank</h1>
-          <UserImage />
-        </div>
-        <h1>Cards</h1>
-        <h5>Balance</h5>
-        <h2>{getAmount()}</h2>
-      </div>
-      <div className={styles.card_container}>
-        {cards.map((item) => (
-          <div key={item.id} className={styles.bank_card_item}>
-            <BankCard
-              onClick={() =>
-                router.push({
-                  pathname: "/card-details",
-                  query: { id: item.id },
-                })
-              }
-              className={styles.bank_card}
-              data={item}
-              isVertical={true}
-            />
-          </div>
-        ))}
-      </div>
+      <BankCardsTitle getAmount={getAmount}></BankCardsTitle>
+      <BankCards cards={cards} push={router.push}></BankCards>
       <SlideNav
         num={cards.length}
         active={activeCard}
         handleNavClick={handleNavClick}
       />
     </main>
+  );
+}
+
+/* internal compoennts */
+function BankCards(props) {
+  return (
+    <div className={styles.card_container}>
+      {props.cards.map((item) => (
+        <div key={item.id} className={styles.bank_card_item}>
+          <BankCard
+            onClick={() =>
+              props.push({
+                pathname: "/card-details",
+                query: {
+                  id: item.id,
+                },
+              })
+            }
+            className={styles.bank_card}
+            data={item}
+            isVertical={true}
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function BankCardsTitle({ getAmount }) {
+  return (
+    <div className={styles.card_title_Section}>
+      <div className={styles.screen_title}>
+        <h1>Bank</h1>
+        <UserImage />
+      </div>
+      <h1>Cards</h1>
+      <h5>Balance</h5>
+      <h2>{getAmount()}</h2>
+    </div>
   );
 }
