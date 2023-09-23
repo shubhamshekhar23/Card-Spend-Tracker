@@ -12,6 +12,8 @@ export default function TransactionHistory({ data, isAnimate }) {
   );
 }
 
+/* Internal components */
+
 function TransactionTypeButton({ type }) {
   const btnMap = {
     [TRANSACTION_TYPE.card2card]: <UilShare color="white" />,
@@ -34,6 +36,7 @@ function TransactionItem({ data }) {
     }
     return str;
   }
+
   return (
     <div className={styles.transaction_section}>
       <TransactionTypeButton type={data.type} />

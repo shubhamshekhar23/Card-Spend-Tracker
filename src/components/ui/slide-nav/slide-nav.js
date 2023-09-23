@@ -1,5 +1,13 @@
 import styles from "./slide-nav.module.scss";
 
+export default function SlideNav(props) {
+  return (
+    <div className={styles.main}>
+      <ChildButtons {...props} />
+    </div>
+  );
+}
+
 function ChildButtons({ num, active, handleNavClick }) {
   const arr = new Array(num).fill(1);
 
@@ -21,12 +29,4 @@ function ChildButtons({ num, active, handleNavClick }) {
       ></button>
     );
   });
-}
-
-export default function SlideNav(props) {
-  return (
-    <div className={styles.main}>
-      <ChildButtons {...props} />
-    </div>
-  );
 }
