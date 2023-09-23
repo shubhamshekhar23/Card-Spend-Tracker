@@ -8,6 +8,7 @@
       "@/constants/*": ["data/constants/*"],
       "@/services/*": ["services/*"],
       "@/mockdata/*": ["data/mockdata/*"],
+      "@/hooks/*": ["hooks/*"],
       "@/context/*": ["context/*"]
     }
   }

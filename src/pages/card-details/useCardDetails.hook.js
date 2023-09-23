@@ -8,7 +8,7 @@ import {
 } from "@/services/card-api.service";
 import { arrangeHistoryByDate } from "@/services/util.service";
 
-export default function useCardDetailsHook() {
+export default function useCardDetails() {
   const { cardsData, setCardsData } = useContext(Cards_data);
   const [historyData, setHistoryData] = useState({});
   const [card, setCard] = useState({});
@@ -16,7 +16,7 @@ export default function useCardDetailsHook() {
   const router = useRouter();
 
   async function fetchData() {
-    if (!cardsData) {
+    if (!cardsData[0]) {
       const response = await getCardsOfUser();
       setCardsData(response);
     }
@@ -32,11 +32,11 @@ export default function useCardDetailsHook() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await getTransactionHistoryOfCard(card.id);
+      const response = await getTransactionHistoryOfCard(card?.id);
       let mapData = arrangeHistoryByDate(response);
       setHistoryData(mapData);
     }
-    if (card.id) fetchData();
+    if (card?.id) fetchData();
   }, [card]);
 
   return {

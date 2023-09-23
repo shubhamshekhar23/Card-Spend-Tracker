@@ -12,11 +12,11 @@ import {
   classForBalanceShareSection,
 } from "./class-provider.service";
 import { formattedAmount } from "@/services/util.service";
-import useCardDetailsHook from "./use-card-details.hook";
+import useCardDetails from "./useCardDetails.hook";
 
 export default function CardDetails() {
   const [sliderPosition, setSliderPosition] = useState(-1); // can hahve 0,1,2
-  const { historyData, card } = useCardDetailsHook();
+  const { historyData, card } = useCardDetails();
   const router = useRouter();
 
   function sliderButtonClick() {
@@ -57,7 +57,7 @@ function BalanceShareSection({ card }) {
     <div className={styles.balance_share}>
       <div>
         <h5>Balance</h5>
-        <h2>{formattedAmount(card.balance || 0)}</h2>
+        <h2>{formattedAmount(card?.balance || 0)}</h2>
       </div>
       <div className={styles.btn_group}>
         <SquareButton>

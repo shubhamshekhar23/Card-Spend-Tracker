@@ -8,31 +8,22 @@ import { Cards_data } from "@/context/context";
 import { useContext } from "react";
 import UserImage from "@/components/user-image/user-image";
 import { formattedAmount } from "@/services/util.service";
+import useFetchCards from "@/hooks/useFetchCards.hook";
 
 export default function BankCardsHome() {
-  const { cardsData, setCardsData } = useContext(Cards_data);
-  const [cards, setCards] = useState([]);
+  const { cardsData } = useFetchCards();
   const [activeCard, setActiveCard] = useState(1);
-
-  useEffect(() => {
-    async function fetchData() {
-      const response = await getCardsOfUser();
-      setCards(response);
-      setCardsData(response);
-    }
-    fetchData();
-  }, []);
 
   function getAmount() {
     let amount = 0;
-    cards.forEach((item) => {
+    cardsData?.forEach((item) => {
       amount += item.balance;
     });
     return formattedAmount(amount);
   }
 
   function handleNavClick(itemIndexClicked) {
-    let cardData = cards[itemIndexClicked - 1];
+    let cardData = cardsData[itemIndexClicked - 1];
     let id = `card-${cardData.id}`;
     document.getElementById(id).scrollIntoView({
       behavior: "smooth",
@@ -46,9 +37,9 @@ export default function BankCardsHome() {
   return (
     <main className={styles.smoothly_appear}>
       <BankCardsTitle getAmount={getAmount}></BankCardsTitle>
-      <BankCards cards={cards} push={router.push}></BankCards>
+      <BankCards cards={cardsData} routerPush={router.push}></BankCards>
       <SlideNav
-        num={cards.length}
+        num={cardsData?.length}
         active={activeCard}
         handleNavClick={handleNavClick}
       />
@@ -64,7 +55,7 @@ function BankCards(props) {
         <div key={item.id} className={styles.bank_card_item}>
           <BankCard
             onClick={() =>
-              props.push({
+              props.routerPush({
                 pathname: "/card-details",
                 query: {
                   id: item.id,
