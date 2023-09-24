@@ -6,6 +6,18 @@
     scale: 1.2;
   }
 }
+@keyframes rotateClockMedium {
+  100% {
+    transform: rotate(-90deg) translateX(-30%);
+    scale: 1.1;
+  }
+}
+@keyframes rotateClockRegular {
+  100% {
+    transform: rotate(-90deg) translateX(-30%);
+    scale: 1;
+  }
+}
 
 @keyframes rotateAntiClock {
   0% {
@@ -41,6 +53,26 @@
   }
 }
 
+/* for vertical cards */
+
+@media screen and (min-height: 850px) {
+  .card_vertical {
+    animation: rotateClock 1s forwards;
+  }
+}
+
+@media screen and (min-height: 780px) and (max-height: 850px) {
+  .card_vertical {
+    animation: rotateClockMedium 1s forwards;
+  }
+}
+
+@media screen and (max-height: 780px) {
+  .card_vertical {
+    animation: rotateClockRegular 1s forwards;
+  }
+}
+
 .card {
   height: 220px;
   min-height: 220px;
@@ -60,20 +92,10 @@
   background: $orange-yellow-card-gradient;
 }
 
-.card_vertical {
-  animation: rotateClock 1s forwards;
-}
-
 .card_heading_section {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.card_abbv {
-}
-
-.card_separator {
 }
 
 .card_symbol_section {
@@ -92,12 +114,6 @@
   border-radius: 8px;
   background-color: $blue-spindle;
   display: inline-block;
-}
-
-.card_echo {
-}
-
-.card_number {
 }
 
 .card_footer {

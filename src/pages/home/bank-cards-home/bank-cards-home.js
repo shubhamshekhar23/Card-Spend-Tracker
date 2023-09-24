@@ -39,6 +39,7 @@ export default function BankCardsHome() {
       <BankCardsTitle getAmount={getAmount}></BankCardsTitle>
       <BankCards cards={cardsData} routerPush={router.push}></BankCards>
       <SlideNav
+        className={styles.nav_container}
         num={cardsData?.length}
         active={activeCard}
         handleNavClick={handleNavClick}

@@ -23,14 +23,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
 }
 
 .card_container {
   display: flex;
   overflow: hidden;
   height: 56vh;
-  padding-top: 220px;
+  padding-top: 190px;
 }
 .card_container::-webkit-scrollbar {
   display: none;
@@ -41,4 +40,23 @@
 }
 .bank_card_item:nth-child(2) {
   margin-left: -70px;
+}
+
+.nav_container {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-height: 850px) {
+  .card_container {
+    display: flex;
+    overflow: hidden;
+    height: 61vh;
+    padding-top: 140px;
+  }
+  .bank_card_item:nth-child(1) {
+    margin-left: -55px;
+  }
+  .bank_card_item:nth-child(2) {
+    margin-left: -90px;
+  }
 }
