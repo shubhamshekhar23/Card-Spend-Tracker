@@ -8,13 +8,21 @@ import {
 import { useState } from "react";
 import { SCREEN_TYPE } from "@/constants/screen.constants";
 
-export default function FooterNav(props) {
+import PropTypes from "prop-types";
+
+FooterNav.propTypes = {
+  data: PropTypes.object,
+  clickHandler: PropTypes.func,
+  activeScreen: PropTypes.number,
+};
+
+export default function FooterNav({ clickHandler, activeScreen }) {
   function handleClick(input) {
-    props.clickHandler(input);
+    clickHandler(input);
   }
 
   function getClassIfActive(compare) {
-    if (compare == props.activeScreen) {
+    if (compare == activeScreen) {
       return styles.icon_active;
     }
     return "";

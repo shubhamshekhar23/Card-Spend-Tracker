@@ -1,7 +1,14 @@
 import styles from "../transaction-history.module.scss";
 import { TransactionList } from "../transaction-list/transaction-list";
 
-export function TransactionByDate({ data, isAnimate }) {
+import PropTypes from "prop-types";
+
+TransactionByDate.propTypes = {
+  data: PropTypes.object,
+  isAnimate: PropTypes.bool,
+};
+
+export function TransactionByDate({ data = {}, isAnimate = false }) {
   return (
     <>
       {Object.keys(data).map((item, index) => {

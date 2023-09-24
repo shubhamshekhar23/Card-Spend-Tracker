@@ -2,10 +2,16 @@ import styles from "../bank-card.module.scss";
 import Image from "next/image";
 import mastercard from "../../../assets/mastercard.svg";
 
-export function CardFooter(props) {
+import PropTypes from "prop-types";
+
+CardFooter.propTypes = {
+  data: PropTypes.object,
+};
+
+export function CardFooter({ data = {} }) {
   return (
     <div className={styles.card_footer}>
-      <span className={styles.card_bank_name}>{props.data?.info?.expiry}</span>
+      <span className={styles.card_bank_name}>{data?.info?.expiry}</span>
       <div>
         <Image
           priority

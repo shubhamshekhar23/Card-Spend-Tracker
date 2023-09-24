@@ -1,19 +1,18 @@
 import styles from "./round-pill.module.scss";
 import { UilEstate } from "@iconscout/react-unicons";
 
-/* 
-props
-  type: small/medium
-  color: pink, yellow, blue, purple
-  gradient: blue
-*/
+import PropTypes from "prop-types";
 
-export default function RoundPill(props) {
+RoundPill.propTypes = {
+  children: PropTypes.any,
+  color: PropTypes.oneOf(["pink", "yellow", "blue"]),
+  gradient: PropTypes.oneOf(["blue"]),
+};
+
+export default function RoundPill({ children, color, gradient }) {
   function getClassNameListUsingProps() {
-    const { type, color, gradient } = props;
     const btnClassList = [styles.round_pill];
 
-    if (type) btnClassList.push(styles["pill_" + type]);
     if (color) btnClassList.push(styles["pill_" + color]);
     if (gradient) btnClassList.push(styles["pill_gradient_" + gradient]);
 
@@ -22,7 +21,7 @@ export default function RoundPill(props) {
 
   return (
     <button className={`${styles.round_pill} ${getClassNameListUsingProps()}`}>
-      {props.children}
+      {children}
     </button>
   );
 }

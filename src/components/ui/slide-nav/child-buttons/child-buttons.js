@@ -1,6 +1,18 @@
 import styles from "../slide-nav.module.scss";
 
-export function ChildButtons({ num, active, handleNavClick }) {
+import PropTypes from "prop-types";
+
+ChildButtons.propTypes = {
+  num: PropTypes.number,
+  active: PropTypes.number,
+  handleNavClick: PropTypes.func,
+};
+
+export function ChildButtons({
+  num = 1,
+  active = 1,
+  handleNavClick = () => {},
+}) {
   const arr = new Array(num).fill(1);
 
   function isActive(src) {

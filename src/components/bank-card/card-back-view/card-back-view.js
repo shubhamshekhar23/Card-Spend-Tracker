@@ -1,4 +1,9 @@
 import styles from "../bank-card.module.scss";
+import PropTypes from "prop-types";
+
+CardBackView.propTypes = {
+  onPointerUp: PropTypes.func.isRequired,
+};
 
 export function CardBackView({ onPointerUp }) {
   return (

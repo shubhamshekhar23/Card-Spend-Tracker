@@ -8,7 +8,13 @@ import {
   UilBolt,
 } from "@iconscout/react-unicons";
 
-export function CatalogueTypeButton({ type }) {
+import PropTypes from "prop-types";
+
+CatalogueTypeButton.propTypes = {
+  type: PropTypes.number,
+};
+
+export function CatalogueTypeButton({ type = 5 }) {
   const btnMap = {
     [BILL_TYPE.mobile]: <UilPhone color="white" />,
     [BILL_TYPE.internet]: <UilWifi color="white" />,

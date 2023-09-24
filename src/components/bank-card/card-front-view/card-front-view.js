@@ -3,7 +3,15 @@ import { CardTitle } from "../card-title/card-title";
 import { CardSymbol } from "../card-symbol/card-symbol";
 import { CardFooter } from "../card-footer/card-footer";
 
-export function CardFrontView({ data, onPointerUp, onPointerDown }) {
+import PropTypes from "prop-types";
+
+CardFrontView.propTypes = {
+  data: PropTypes.object,
+  onPointerUp: PropTypes.func,
+  onPointerDown: PropTypes.func,
+};
+
+export function CardFrontView({ data = {}, onPointerUp, onPointerDown }) {
   return (
     <div className={styles.card_front} onPointerDown={onPointerDown}>
       <CardTitle data={data}></CardTitle>

@@ -3,7 +3,13 @@ import SquareButton from "@/ui/square-button/square-button";
 import { UilShare, UilHistory } from "@iconscout/react-unicons";
 import { formattedAmount } from "@/services/util.service";
 
-export function BalanceShareSection({ card }) {
+import PropTypes from "prop-types";
+
+BalanceShareSection.propTypes = {
+  card: PropTypes.object,
+};
+
+export function BalanceShareSection({ card = {} }) {
   return (
     <div className={styles.balance_share}>
       <div>

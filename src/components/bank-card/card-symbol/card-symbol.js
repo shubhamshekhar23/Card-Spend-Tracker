@@ -2,6 +2,10 @@ import styles from "../bank-card.module.scss";
 import Image from "next/image";
 import contactless from "../../../assets/contactless.svg";
 
+import PropTypes from "prop-types";
+
+CardSymbol.propTypes = {};
+
 export function CardSymbol() {
   return (
     <div className={styles.card_symbol_section}>

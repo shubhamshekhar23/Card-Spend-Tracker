@@ -1,7 +1,13 @@
 import styles from "../bank-cards-home.module.scss";
 import UserImage from "@/components/user-image/user-image";
 
-export function BankCardsTitle({ getAmount }) {
+import PropTypes from "prop-types";
+
+BankCardsTitle.propTypes = {
+  getAmount: PropTypes.func,
+};
+
+export function BankCardsTitle({ getAmount = () => {} }) {
   return (
     <div className={styles.card_title_Section}>
       <div className={styles.screen_title}>

@@ -1,9 +1,9 @@
 import styles from "./text-button.module.scss";
 
-export default function TextButton(props) {
+export default function TextButton({ children }) {
   return (
     <button className={styles.text_button}>
-      <span>{props.children}</span>
+      <span>{children}</span>
     </button>
   );
 }

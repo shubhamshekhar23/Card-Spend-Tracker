@@ -3,7 +3,13 @@ import TextButton from "@/ui/text-button/text-button";
 import { formattedAmount } from "@/services/util.service";
 import { CatalogueTypeButton } from "../catalogue-type-button/catalogue-type-button";
 
-export function CatalogueItem({ data }) {
+import PropTypes from "prop-types";
+
+CatalogueItem.propTypes = {
+  data: PropTypes.object,
+};
+
+export function CatalogueItem({ data = {} }) {
   return (
     <div className={styles.transaction_section}>
       <CatalogueTypeButton type={data.type} />

@@ -1,15 +1,22 @@
 import styles from "../bank-cards-home.module.scss";
 import BankCard from "@/components/bank-card/bank-card";
 
+import PropTypes from "prop-types";
+
+BankCards.propTypes = {
+  cards: PropTypes.array,
+  routerPush: PropTypes.func,
+};
+
 /* internal compoennts */
-export function BankCards(props) {
+export function BankCards({ cards = [], routerPush = () => {} }) {
   return (
     <div className={styles.card_container}>
-      {props.cards.map((item) => (
+      {cards.map((item) => (
         <div key={item.id} className={styles.bank_card_item}>
           <BankCard
             onClick={() =>
-              props.routerPush({
+              routerPush({
                 pathname: "/card-details",
                 query: {
                   id: item.id,

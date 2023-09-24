@@ -1,14 +1,17 @@
 import styles from "../bank-card.module.scss";
 
-export function CardTitle(props) {
+import PropTypes from "prop-types";
+
+CardTitle.propTypes = {
+  data: PropTypes.object,
+};
+
+export function CardTitle({ data = {} }) {
   return (
     <div className={styles.card_heading_section}>
-      <span className={styles.card_abbv}>{props.data?.info?.abbv}</span>
+      <span className={styles.card_abbv}>{data?.info?.abbv}</span>
       <span className={styles.card_separator}> | </span>
-      <span className={styles.card_bank_name}>
-        {" "}
-        {props.data?.info?.bankName}{" "}
-      </span>
+      <span className={styles.card_bank_name}> {data?.info?.bankName} </span>
     </div>
   );
 }
