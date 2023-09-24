@@ -38,7 +38,9 @@ export default function CardDetails() {
 
       {/* balance share section */}
       <div className={classForBalanceShareSection(sliderPosition)}>
-        <BankCard className={styles.bank_card} data={card} />
+        <div className={styles.card_container}>
+          <BankCard className={styles.bank_card} data={card} />
+        </div>
         <BalanceShareSection card={card} />
       </div>
 

@@ -5,8 +5,9 @@
   position: relative;
 }
 
-.bank_card {
-  margin: 0 auto;
+.card_container {
+  display: grid;
+  place-content: center;
 }
 
 .header {
@@ -53,7 +54,7 @@
   padding: 20px;
   box-sizing: border-box;
   height: 100%;
-  top: 60%;
+  top: clamp(485px, 60%, 100%);
   transition: top 0.5s ease-in;
 }
 

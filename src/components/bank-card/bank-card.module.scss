@@ -18,6 +18,29 @@
   }
 }
 
+@keyframes rotateAntiClockToSmall {
+  0% {
+    transform: rotate(-90deg) translateX(-30%);
+    scale: 1.2;
+  }
+  100% {
+    scale: 0.8;
+    transform: rotate(0deg) translateX(0%);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card_horizontal {
+    animation: rotateAntiClockToSmall 1s forwards;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .card_horizontal {
+    animation: rotateAntiClock 1s forwards;
+  }
+}
+
 .card {
   height: 220px;
   min-height: 220px;
@@ -39,10 +62,6 @@
 
 .card_vertical {
   animation: rotateClock 1s forwards;
-}
-
-.card_horizontal {
-  animation: rotateAntiClock 1s forwards;
 }
 
 .card_heading_section {
