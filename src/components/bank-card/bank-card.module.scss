@@ -80,8 +80,71 @@
   border-radius: 15px;
   color: white;
   font-size: 20px;
-  padding: 20px;
   box-sizing: border-box;
+}
+
+.card_front {
+  padding: 20px;
+  .card_heading_section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card_symbol_section {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card_bank_name {
+    color: $blue-frenchpass;
+    font-size: 17px;
+  }
+
+  .card_square {
+    height: 40px;
+    width: 50px;
+    border-radius: 8px;
+    background-color: $blue-spindle;
+    display: inline-block;
+  }
+
+  .card_footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    p {
+      margin: 0;
+      font-size: 10px;
+      position: relative;
+      bottom: 11px;
+    }
+  }
+
+  .card_logo {
+    font-size: 15px;
+  }
+}
+
+.card_back {
+  padding: 0;
+  padding-top: 25px;
+  .strip {
+    height: 60px;
+    width: 100%;
+    background: wheat;
+  }
+
+  .cvv_section {
+    height: 60px;
+    margin: 14px;
+    background: black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 20px;
+  }
 }
 
 .card_mastercard_gradient_color {
@@ -90,44 +153,4 @@
 
 .card_visa_gradient_color {
   background: $orange-yellow-card-gradient;
-}
-
-.card_heading_section {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.card_symbol_section {
-  margin: 20px 0;
-  display: flex;
-  justify-content: space-between;
-}
-.card_bank_name {
-  color: $blue-frenchpass;
-  font-size: 17px;
-}
-
-.card_square {
-  height: 40px;
-  width: 50px;
-  border-radius: 8px;
-  background-color: $blue-spindle;
-  display: inline-block;
-}
-
-.card_footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5px;
-  p {
-    margin: 0;
-    font-size: 10px;
-    position: relative;
-    bottom: 11px;
-  }
-}
-
-.card_logo {
-  font-size: 15px;
 }

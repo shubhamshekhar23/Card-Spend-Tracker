@@ -16,6 +16,7 @@ import TextButton from "@/ui/text-button/text-button";
 import SquareButton from "@/ui/square-button/square-button";
 import FooterNav from "@/components/footer-nav/footer-nav";
 import SlideNav from "@/components/ui/slide-nav/slide-nav";
+import BankCardBack from "@/components/bank-card-back/bank-card-back";
 
 export default function UiStory() {
   return (
@@ -23,6 +24,8 @@ export default function UiStory() {
       {/* slide nav */}
       {/* footnerNav */}
       <FooterNav />
+
+      <BankCardBack />
 
       {/* Buttons */}
       <div>

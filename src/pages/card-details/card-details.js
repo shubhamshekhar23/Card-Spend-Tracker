@@ -2,7 +2,6 @@ import styles from "./card-details.module.scss";
 import { useState, useEffect } from "react";
 import { UilArrowLeft } from "@iconscout/react-unicons";
 import { useRouter } from "next/router";
-import BankCard from "@/components/bank-card/bank-card";
 import TransactionHistory from "@/components/transaction-history/transaction-history";
 import SquareButton from "@/ui/square-button/square-button";
 import { UilShare, UilHistory } from "@iconscout/react-unicons";
@@ -13,6 +12,7 @@ import {
 } from "./class-provider.service";
 import { formattedAmount } from "@/services/util.service";
 import useCardDetails from "./useCardDetails.hook";
+import BankCard from "@/components/bank-card/bank-card";
 
 export default function CardDetails() {
   const [sliderPosition, setSliderPosition] = useState(-1); // can hahve 0,1,2
@@ -39,7 +39,11 @@ export default function CardDetails() {
       {/* balance share section */}
       <div className={classForBalanceShareSection(sliderPosition)}>
         <div className={styles.card_container}>
-          <BankCard className={styles.bank_card} data={card} />
+          <BankCard
+            className={styles.bank_card}
+            data={card}
+            isBackPreview={true}
+          />
         </div>
         <BalanceShareSection card={card} />
       </div>

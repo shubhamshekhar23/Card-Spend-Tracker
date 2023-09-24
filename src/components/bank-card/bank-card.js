@@ -3,42 +3,71 @@ import { useState } from "react";
 import Image from "next/image";
 import mastercard from "../../assets/mastercard.svg";
 import contactless from "../../assets/contactless.svg";
+import { getClassNamesForCard } from "./class-provider-service";
 
 export default function BankCard(props) {
+  const [isBackView, setIsBackView] = useState(false); // can hahve 0,1,2
   const data = props.data;
 
-  function getClassNamesForCard() {
-    let classNames = [styles.card];
-    if (data?.info?.type == "mastercard") {
-      classNames.push(styles.card_mastercard_gradient_color);
-    } else {
-      classNames.push(styles.card_visa_gradient_color);
+  function handleMouseUp() {
+    if (!props.isBackPreview) return;
+    setIsBackView(false);
+    document.removeEventListener("pointerup", handleMouseUp);
+  }
+
+  function handleMouseDown() {
+    if (!props.isBackPreview) return;
+    setIsBackView(true);
+    document.addEventListener("pointerup", handleMouseUp);
+  }
+
+  function correctViewOfCard() {
+    if (props.isBackPreview && isBackView) {
+      return (
+        <CardBackView data={data} onPointerUp={handleMouseUp}></CardBackView>
+      );
     }
-    if (props.isVertical) {
-      classNames.push(styles.card_vertical);
-    } else {
-      classNames.push(styles.card_horizontal);
-    }
-    return classNames.join(" ");
+    return (
+      <CardFrontView
+        data={data}
+        onPointerDown={handleMouseDown}
+      ></CardFrontView>
+    );
   }
 
   return (
     <div
-      className={`${props.className} ${getClassNamesForCard()}`}
+      className={`${props.className} ${getClassNamesForCard(
+        props,
+        isBackView
+      )}`}
       onClick={props.onClick}
       id={`card-${data?.id}`}
     >
-      {/* title */}
+      {correctViewOfCard()}
+    </div>
+  );
+}
+
+function CardFrontView({ data, onPointerUp, onPointerDown }) {
+  return (
+    <div className={styles.card_front} onPointerDown={onPointerDown}>
       <CardTitle data={data}></CardTitle>
-
-      {/* symbol */}
       <CardSymbol></CardSymbol>
-
-      {/* card number */}
       <div className={styles.card_number}>{data?.info?.number}</div>
-
-      {/* footer */}
       <CardFooter data={data}></CardFooter>
+    </div>
+  );
+}
+
+function CardBackView({ onPointerUp }) {
+  return (
+    <div onPointerUp={onPointerUp}>
+      {/* strip */}
+      <div className={styles.strip}></div>
+      <div className={styles.cvv_section}>
+        <span>633</span>
+      </div>
     </div>
   );
 }
