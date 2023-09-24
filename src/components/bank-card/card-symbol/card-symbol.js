@@ -1,6 +1,6 @@
-import styles from "./bank-card.module.scss";
+import styles from "../bank-card.module.scss";
 import Image from "next/image";
-import contactless from "../../assets/contactless.svg";
+import contactless from "../../../assets/contactless.svg";
 
 export function CardSymbol() {
   return (

@@ -1,4 +1,4 @@
-import styles from "./bank-cards-home.module.scss";
+import styles from "../bank-cards-home.module.scss";
 import UserImage from "@/components/user-image/user-image";
 
 export function BankCardsTitle({ getAmount }) {

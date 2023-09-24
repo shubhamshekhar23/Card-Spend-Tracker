@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getClassNamesForCard } from "./class-provider.service";
-import { CardBackView } from "./card-back-view";
-import { CardFrontView } from "./card-front-view";
+import { CardBackView } from "./card-back-view/card-back-view";
+import { CardFrontView } from "./card-front-view/card-front-view";
 
 export default function BankCard(props) {
   const [isBackView, setIsBackView] = useState(false); // can hahve 0,1,2

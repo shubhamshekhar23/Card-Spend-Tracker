@@ -1,6 +1,6 @@
-import styles from "./card-details.module.scss";
+import styles from "../card-details.module.scss";
 import TransactionHistory from "@/components/transaction-history/transaction-history";
-import { classForSliderPanel } from "./class-provider.service";
+import { classForSliderPanel } from "../class-provider.service";
 
 export function HistoryPanel(props) {
   return (

@@ -1,4 +1,4 @@
-import { ChildButtons } from "./child-buttons";
+import { ChildButtons } from "./child-buttons/child-buttons";
 import styles from "./slide-nav.module.scss";
 
 export default function SlideNav(props) {

@@ -1,4 +1,4 @@
-import styles from "./bank-card.module.scss";
+import styles from "../bank-card.module.scss";
 
 export function CardBackView({ onPointerUp }) {
   return (

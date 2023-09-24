@@ -1,4 +1,4 @@
-import styles from "./bank-cards-home.module.scss";
+import styles from "../bank-cards-home.module.scss";
 import BankCard from "@/components/bank-card/bank-card";
 
 /* internal compoennts */

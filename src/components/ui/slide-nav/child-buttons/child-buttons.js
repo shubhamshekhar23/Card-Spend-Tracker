@@ -1,4 +1,4 @@
-import styles from "./slide-nav.module.scss";
+import styles from "../slide-nav.module.scss";
 
 export function ChildButtons({ num, active, handleNavClick }) {
   const arr = new Array(num).fill(1);

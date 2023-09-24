@@ -1,8 +1,7 @@
-import styles from "./bank-card.module.scss";
+import styles from "../bank-card.module.scss";
 import Image from "next/image";
-import mastercard from "../../assets/mastercard.svg";
+import mastercard from "../../../assets/mastercard.svg";
 
-/* internal components */
 export function CardFooter(props) {
   return (
     <div className={styles.card_footer}>

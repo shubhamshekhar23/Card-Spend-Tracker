@@ -1,5 +1,5 @@
 import styles from "./transaction-history.module.scss";
-import { TransactionByDate } from "./transaction-by-date";
+import { TransactionByDate } from "./transaction-by-date/transaction-by-date";
 
 export default function TransactionHistory({ data, isAnimate }) {
   return (

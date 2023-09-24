@@ -7,9 +7,9 @@ import {
 } from "./class-provider.service";
 import useCardDetails from "./useCardDetails.hook";
 import BankCard from "@/components/bank-card/bank-card";
-import { HistoryPanel } from "./history-panel";
-import { CardDetailsTitle } from "./card-details-title";
-import { BalanceShareSection } from "./balance-share-section";
+import { HistoryPanel } from "./history-panel/history-panel";
+import { CardDetailsTitle } from "./card-details-title/card-details-title";
+import { BalanceShareSection } from "./balance-share-section/balance-share-section";
 
 export default function CardDetails() {
   const [sliderPosition, setSliderPosition] = useState(-1); // can hahve 0,1,2

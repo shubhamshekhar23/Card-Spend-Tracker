@@ -2,7 +2,7 @@ import styles from "./catalogue.module.scss";
 import { useState, useEffect } from "react";
 import { getDebtCatalogue } from "@/services/card-api.service";
 import UserImage from "@/components/user-image/user-image";
-import { CatalogueList } from "./catalogue-list";
+import { CatalogueList } from "./catalogue-list/catalogue-list";
 
 export default function Catalogue() {
   const [catalogueData, setCatalogueData] = useState([]);

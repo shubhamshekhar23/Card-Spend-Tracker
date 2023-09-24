@@ -1,6 +1,6 @@
-import styles from "./transaction-history.module.scss";
+import styles from "../transaction-history.module.scss";
 import { formattedAmount } from "@/services/util.service";
-import { TransactionTypeButton } from "./transaction-type-button";
+import { TransactionTypeButton } from "../transaction-type-button/transaction-type-button";
 
 export function TransactionItem({ data }) {
   function getFormatAmount(amount, info) {

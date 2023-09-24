@@ -1,7 +1,7 @@
-import styles from "./bank-card.module.scss";
-import { CardTitle } from "./card-title";
-import { CardSymbol } from "./card-symbol";
-import { CardFooter } from "./card-footer";
+import styles from "../bank-card.module.scss";
+import { CardTitle } from "../card-title/card-title";
+import { CardSymbol } from "../card-symbol/card-symbol";
+import { CardFooter } from "../card-footer/card-footer";
 
 export function CardFrontView({ data, onPointerUp, onPointerDown }) {
   return (

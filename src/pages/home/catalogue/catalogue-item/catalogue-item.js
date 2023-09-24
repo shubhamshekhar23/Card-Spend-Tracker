@@ -1,7 +1,7 @@
-import styles from "./catalogue.module.scss";
+import styles from "../catalogue.module.scss";
 import TextButton from "@/ui/text-button/text-button";
 import { formattedAmount } from "@/services/util.service";
-import { CatalogueTypeButton } from "./catalogue-type-button";
+import { CatalogueTypeButton } from "../catalogue-type-button/catalogue-type-button";
 
 export function CatalogueItem({ data }) {
   return (

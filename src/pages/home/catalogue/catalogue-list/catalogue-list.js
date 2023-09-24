@@ -1,4 +1,4 @@
-import { CatalogueItem } from "./catalogue-item";
+import { CatalogueItem } from "../catalogue-item/catalogue-item";
 
 export function CatalogueList({ data }) {
   function getList() {

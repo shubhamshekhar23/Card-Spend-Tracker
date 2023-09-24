@@ -1,5 +1,5 @@
-import styles from "./transaction-history.module.scss";
-import { TransactionList } from "./transaction-list";
+import styles from "../transaction-history.module.scss";
+import { TransactionList } from "../transaction-list/transaction-list";
 
 export function TransactionByDate({ data, isAnimate }) {
   return (

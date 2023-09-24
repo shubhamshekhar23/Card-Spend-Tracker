@@ -7,8 +7,8 @@ import { Cards_data } from "@/context/context";
 import { useContext } from "react";
 import { formattedAmount } from "@/services/util.service";
 import useFetchCards from "@/hooks/useFetchCards.hook";
-import { BankCards } from "./bank-cards";
-import { BankCardsTitle } from "./bank-cards-title";
+import { BankCards } from "./bank-cards/bank-cards";
+import { BankCardsTitle } from "./bank-cards-title/bank-cards-title";
 
 export default function BankCardsHome() {
   const { cardsData } = useFetchCards();
