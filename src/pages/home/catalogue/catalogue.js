@@ -1,18 +1,8 @@
 import styles from "./catalogue.module.scss";
 import { useState, useEffect } from "react";
 import { getDebtCatalogue } from "@/services/card-api.service";
-import { BILL_TYPE } from "@/constants/entity.constants";
-import RoundPill from "@/ui/round-pill/round-pill";
-import TextButton from "@/ui/text-button/text-button";
-import {
-  UilEstate,
-  UilCar,
-  UilPhone,
-  UilWifi,
-  UilBolt,
-} from "@iconscout/react-unicons";
 import UserImage from "@/components/user-image/user-image";
-import { formattedAmount } from "@/services/util.service";
+import { CatalogueList } from "./catalogue-list";
 
 export default function Catalogue() {
   const [catalogueData, setCatalogueData] = useState([]);
@@ -32,46 +22,8 @@ export default function Catalogue() {
           <h1>Catalogue</h1>
           <UserImage />
         </div>
-        <TransactionList data={catalogueData} />
+        <CatalogueList data={catalogueData} />
       </div>
     </main>
   );
-}
-
-function TransactionList({ data }) {
-  function getList() {
-    return (
-      data &&
-      data.map((item) => {
-        return <TransactionItem key={item.id} data={item} />;
-      })
-    );
-  }
-  return <>{getList()}</>;
-}
-
-function TransactionItem({ data }) {
-  return (
-    <div className={styles.transaction_section}>
-      <TransactionTypeButton type={data.type} />
-      <div className={styles.details_amount}>
-        <div className={styles.transaction__description}>
-          <h3>{data.title}</h3>
-          <h4>The debt is {formattedAmount(data.amount)}</h4>
-        </div>
-        <TextButton>Pay</TextButton>
-      </div>
-    </div>
-  );
-}
-
-function TransactionTypeButton({ type }) {
-  const btnMap = {
-    [BILL_TYPE.mobile]: <UilPhone color="white" />,
-    [BILL_TYPE.internet]: <UilWifi color="white" />,
-    [BILL_TYPE.vehicle]: <UilCar color="white" />,
-    [BILL_TYPE.house]: <UilEstate color="white" />,
-    [BILL_TYPE.utility]: <UilBolt color="white" />,
-  };
-  return <RoundPill gradient="blue">{btnMap[type]}</RoundPill>;
 }

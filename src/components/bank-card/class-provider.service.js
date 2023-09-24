@@ -1,7 +1,7 @@
 import styles from "./bank-card.module.scss";
 
 export function getClassNamesForCard(props, isBackView) {
-  let classNames = [styles.card];
+  let classNames = [styles.card, props.className];
   updateGradientRelated(classNames, props, isBackView);
   updateVerticalOrHorizontal(classNames, props, isBackView);
   updateBasedOnFrontOrBack(classNames, props, isBackView);

@@ -1,18 +1,20 @@
 import styles from "./bank-cards-home.module.scss";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import BankCard from "@/components/bank-card/bank-card";
 import { getCardsOfUser } from "@/services/card-api.service";
 import SlideNav from "@/components/ui/slide-nav/slide-nav";
 import { Cards_data } from "@/context/context";
 import { useContext } from "react";
-import UserImage from "@/components/user-image/user-image";
 import { formattedAmount } from "@/services/util.service";
 import useFetchCards from "@/hooks/useFetchCards.hook";
+import { BankCards } from "./bank-cards";
+import { BankCardsTitle } from "./bank-cards-title";
 
 export default function BankCardsHome() {
   const { cardsData } = useFetchCards();
   const [activeCard, setActiveCard] = useState(1);
+
+  const router = useRouter();
 
   function getAmount() {
     let amount = 0;
@@ -33,7 +35,6 @@ export default function BankCardsHome() {
     setActiveCard(itemIndexClicked);
   }
 
-  const router = useRouter();
   return (
     <main className={styles.smoothly_appear}>
       <BankCardsTitle getAmount={getAmount}></BankCardsTitle>
@@ -45,44 +46,5 @@ export default function BankCardsHome() {
         handleNavClick={handleNavClick}
       />
     </main>
-  );
-}
-
-/* internal compoennts */
-function BankCards(props) {
-  return (
-    <div className={styles.card_container}>
-      {props.cards.map((item) => (
-        <div key={item.id} className={styles.bank_card_item}>
-          <BankCard
-            onClick={() =>
-              props.routerPush({
-                pathname: "/card-details",
-                query: {
-                  id: item.id,
-                },
-              })
-            }
-            className={styles.bank_card}
-            data={item}
-            isVertical={true}
-          />
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function BankCardsTitle({ getAmount }) {
-  return (
-    <div className={styles.card_title_Section}>
-      <div className={styles.screen_title}>
-        <h1>Bank</h1>
-        <UserImage />
-      </div>
-      <h1>Cards</h1>
-      <h5>Balance</h5>
-      <h2>{getAmount()}</h2>
-    </div>
   );
 }
