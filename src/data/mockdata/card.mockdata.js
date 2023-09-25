@@ -9,6 +9,7 @@ export const bankCardListMockData = [
       number: "5489 7452 5726 9827",
       expiry: "04/24",
       type: "mastercard",
+      cvv: 322,
     },
   },
   {
@@ -21,6 +22,7 @@ export const bankCardListMockData = [
       number: "3000 4232 7685 5555",
       expiry: "02/26",
       type: "visa",
+      cvv: 322,
     },
   },
 ];

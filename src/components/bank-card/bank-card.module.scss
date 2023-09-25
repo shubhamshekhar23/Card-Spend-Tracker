@@ -124,6 +124,13 @@
   .card_logo {
     font-size: 15px;
   }
+  &.card_mastercard_gradient_color {
+    @include pink-blue-card-gradient(45deg);
+  }
+
+  &.card_visa_gradient_color {
+    @include orange-yellow-card-gradient(45deg);
+  }
 }
 
 .card_back {
@@ -132,25 +139,24 @@
   .strip {
     height: 60px;
     width: 100%;
-    background: wheat;
+    background: $blue-madison;
   }
 
   .cvv_section {
     height: 60px;
     margin: 14px;
-    background: black;
+    background: $blue-cornflower-v2;
     border-radius: 5px;
     display: flex;
     justify-content: end;
     align-items: center;
     padding-right: 20px;
   }
-}
+  &.card_mastercard_gradient_color {
+    @include pink-blue-card-gradient(135deg);
+  }
 
-.card_mastercard_gradient_color {
-  background: $pink-blue-card-gradient;
-}
-
-.card_visa_gradient_color {
-  background: $orange-yellow-card-gradient;
+  &.card_visa_gradient_color {
+    @include orange-yellow-card-gradient(135deg);
+  }
 }
