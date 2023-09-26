@@ -29,7 +29,7 @@
 
 - Integrated with typescript
 - alias imports are updated in tsconfig.json
-- typings.d.ts is added for fixing import error for .scss files and other lib
+- next-env.d.ts is updated for fixing import error for .scss files and other lib
 - plop used for creating components - plopfile.js, plop-templates folder
 
 ```
