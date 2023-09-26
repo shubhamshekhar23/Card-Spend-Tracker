@@ -25,6 +25,20 @@
 - Every component is a folder which include component file and module.scss
 - Testing files if added in future can be added in respective component folder
 
+## Special features
+
+- Integrated with typescript
+- alias imports are updated in tsconfig.json
+- typings.d.ts is added for fixing import error for .scss files and other lib
+- plop used for creating components - plopfile.js, plop-templates folder
+
+```
+npx plop component my-component
+```
+
+- .prettierignore file is added to exclude auto formating for .hbs plop template file
+- settings.json updated with autoformat true which uses prettier
+
 ## Future improvemnts
 
 - Due to next.js, this app can follow combination of CSR and SSR
