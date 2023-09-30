@@ -39,6 +39,7 @@ npx plop component my-component
 - .prettierignore file is added to exclude auto formating for .hbs plop template file
 - settings.json updated with autoformat true which uses prettier
 - extensions.json is added for vscode for the recommended extension
+- A sample precommit hook has been added for a message that says to integrate tests
 
 ## Future improvemnts
 
