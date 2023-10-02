@@ -1,5 +1,6 @@
 {
   "extends": "next/core-web-vitals",
+  "plugins": ["simple-import-sort"],
   "rules": {
     // for a file to have maximum lines
     "max-len": [
@@ -12,6 +13,12 @@
         "ignoreRegExpLiterals": true,
         "ignoreComments": true,
         "ignoreTrailingComments": true
+      }
+    ],
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [["^react"], ["^antd"], ["^@?\\w"], ["@/(.*)"], ["^[./]"]]
       }
     ]
   }

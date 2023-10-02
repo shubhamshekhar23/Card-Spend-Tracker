@@ -1,13 +1,16 @@
-import styles from "./bank-cards-home.module.scss";
+import { useEffect,useState } from "react";
+import { useContext } from "react";
+
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
-import { getCardsOfUser } from "@/services/card-api.service";
+
 import SlideNav from "@/components/ui/slide-nav/slide-nav";
 import { Cards_data } from "@/context/context";
-import { useContext } from "react";
-import { formattedAmount } from "@/services/util.service";
 import useFetchCards from "@/hooks/useFetchCards.hook";
+import { getCardsOfUser } from "@/services/card-api.service";
+import { formattedAmount } from "@/services/util.service";
+
 import { BankCards } from "./bank-cards/bank-cards";
+import styles from "./bank-cards-home.module.scss";
 import { BankCardsTitle } from "./bank-cards-title/bank-cards-title";
 
 export default function BankCardsHome() {

@@ -1,9 +1,11 @@
-import styles from "./history.module.scss";
-import { useState, useEffect } from "react";
-import { getTransactionHistory } from "@/services/card-api.service";
-import { arrangeHistoryByDate } from "@/services/util.service";
+import { useEffect,useState } from "react";
+
 import TransactionHistory from "@/components/transaction-history/transaction-history";
 import UserImage from "@/components/user-image/user-image";
+import { getTransactionHistory } from "@/services/card-api.service";
+import { arrangeHistoryByDate } from "@/services/util.service";
+
+import styles from "./history.module.scss";
 
 export default function History() {
   const [historyData, setHistoryData]: any = useState({});

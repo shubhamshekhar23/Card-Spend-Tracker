@@ -1,5 +1,6 @@
-import styles from "../bank-cards-home.module.scss";
 import BankCard from "@/components/bank-card/bank-card";
+
+import styles from "../bank-cards-home.module.scss";
 
 type BankCardsPropTypes = {
   cards: Array<any>;

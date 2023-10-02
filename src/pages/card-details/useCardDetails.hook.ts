@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useEffect,useState } from "react";
 import { useContext } from "react";
+
+import { useRouter } from "next/router";
+
 import { Cards_data } from "@/context/context";
 import {
-  getTransactionHistoryOfCard,
   getCardsOfUser,
+  getTransactionHistoryOfCard,
 } from "@/services/card-api.service";
 import { arrangeHistoryByDate } from "@/services/util.service";
 

@@ -1,5 +1,6 @@
-import styles from "../bank-cards-home.module.scss";
 import UserImage from "@/components/user-image/user-image";
+
+import styles from "../bank-cards-home.module.scss";
 
 type BankCardsTitlePropTypes = {
   getAmount: () => any;

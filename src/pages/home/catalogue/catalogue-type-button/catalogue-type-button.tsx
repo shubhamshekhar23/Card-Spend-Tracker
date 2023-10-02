@@ -1,12 +1,13 @@
-import { BILL_TYPE } from "@/constants/entity.constants";
-import RoundPill from "@/ui/round-pill/round-pill";
 import {
-  UilEstate,
+  UilBolt,
   UilCar,
+  UilEstate,
   UilPhone,
   UilWifi,
-  UilBolt,
 } from "@iconscout/react-unicons";
+
+import { BILL_TYPE } from "@/constants/entity.constants";
+import RoundPill from "@/ui/round-pill/round-pill";
 
 type CatalogueTypeButtonPropTypes = {
   type: number;

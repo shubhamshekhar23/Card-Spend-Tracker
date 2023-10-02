@@ -1,6 +1,7 @@
-import styles from "../bank-card.module.scss";
 import Image from "next/image";
+
 import mastercard from "../../../assets/mastercard.svg";
+import styles from "../bank-card.module.scss";
 
 type CardFooterPropTypes = {
   data: any;

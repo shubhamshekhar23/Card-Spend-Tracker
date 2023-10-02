@@ -1,5 +1,6 @@
-import styles from "../card-details.module.scss";
 import TransactionHistory from "@/components/transaction-history/transaction-history";
+
+import styles from "../card-details.module.scss";
 import { classForSliderPanel } from "../class-provider.service";
 
 type HistoryPanelPropTypes = {

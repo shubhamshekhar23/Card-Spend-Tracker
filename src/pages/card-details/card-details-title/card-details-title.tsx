@@ -1,5 +1,6 @@
-import styles from "../card-details.module.scss";
 import { UilArrowLeft } from "@iconscout/react-unicons";
+
+import styles from "../card-details.module.scss";
 import { classForTitle } from "../class-provider.service";
 
 type CardDetailsTitlePropTypes = {

@@ -1,21 +1,23 @@
-import styles from "./ui-story.module.scss";
 import {
-  UilEstate,
-  UilShare,
-  UilHistory,
-  UilCar,
   UilBars,
+  UilBolt,
+  UilCar,
+  UilEstate,
+  UilHistory,
   UilMusicNote,
   UilPhone,
-  UilWifi,
-  UilBolt,
+  UilShare,
   UilSpaceKey,
+  UilWifi,
 } from "@iconscout/react-unicons";
-import RoundPill from "@/ui/round-pill/round-pill";
-import TextButton from "@/ui/text-button/text-button";
-import SquareButton from "@/ui/square-button/square-button";
+
 import FooterNav from "@/components/footer-nav/footer-nav";
 import SlideNav from "@/components/ui/slide-nav/slide-nav";
+import RoundPill from "@/ui/round-pill/round-pill";
+import SquareButton from "@/ui/square-button/square-button";
+import TextButton from "@/ui/text-button/text-button";
+
+import styles from "./ui-story.module.scss";
 
 export default function UiStory() {
   return (

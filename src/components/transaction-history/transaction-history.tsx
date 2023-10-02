@@ -1,5 +1,5 @@
-import styles from "./transaction-history.module.scss";
 import { TransactionByDate } from "./transaction-by-date/transaction-by-date";
+import styles from "./transaction-history.module.scss";
 
 type TransactionHistoryPropTypes = {
   data: any;

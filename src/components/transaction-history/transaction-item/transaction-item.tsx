@@ -1,5 +1,6 @@
-import styles from "../transaction-history.module.scss";
 import { formattedAmount } from "@/services/util.service";
+
+import styles from "../transaction-history.module.scss";
 import { TransactionTypeButton } from "../transaction-type-button/transaction-type-button";
 
 type TransactionItemPropTypes = {

@@ -37,9 +37,11 @@ npx plop component my-component
 ```
 
 - .prettierignore file is added to exclude auto formating for .hbs plop template file
+- eslint fix has been made to run when file is saved, its configured in settings.json in .vscode
 - settings.json updated with autoformat true which uses prettier
 - extensions.json is added for vscode for the recommended extension
 - A sample precommit hook has been added for a message that says to integrate tests
+- eslint-plugin-simple-import-sort has been added to sort-imports and add a line break; It has been configured in .eslintrs.json
 
 ## Future improvemnts
 

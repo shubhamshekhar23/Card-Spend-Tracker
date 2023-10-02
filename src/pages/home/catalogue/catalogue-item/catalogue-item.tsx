@@ -1,6 +1,7 @@
-import styles from "../catalogue.module.scss";
-import TextButton from "@/ui/text-button/text-button";
 import { formattedAmount } from "@/services/util.service";
+import TextButton from "@/ui/text-button/text-button";
+
+import styles from "../catalogue.module.scss";
 import { CatalogueTypeButton } from "../catalogue-type-button/catalogue-type-button";
 
 type CatalogueItemPropTypes = {

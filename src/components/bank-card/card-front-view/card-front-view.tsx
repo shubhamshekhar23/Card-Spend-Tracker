@@ -1,7 +1,7 @@
 import styles from "../bank-card.module.scss";
-import { CardTitle } from "../card-title/card-title";
-import { CardSymbol } from "../card-symbol/card-symbol";
 import { CardFooter } from "../card-footer/card-footer";
+import { CardSymbol } from "../card-symbol/card-symbol";
+import { CardTitle } from "../card-title/card-title";
 
 type CardFrontViewPropTypes = {
   data: any;

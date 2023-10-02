@@ -1,12 +1,15 @@
-import styles from "./footer-nav.module.scss";
+import { useState } from "react";
+
 import {
+  UilBars,
   UilEstate,
   UilHistory,
-  UilBars,
   UilSpaceKey,
 } from "@iconscout/react-unicons";
-import { useState } from "react";
+
 import { SCREEN_TYPE } from "@/constants/screen.constants";
+
+import styles from "./footer-nav.module.scss";
 
 type FooterNavPropTypes = {
   clickHandler: (param: any) => void;
