@@ -37,6 +37,7 @@ npx plop component my-component
 ```
 
 - .prettierignore file is added to exclude auto formating for .hbs plop template file
+- .prettierrc.js is added for config for prettier
 - eslint fix has been made to run when file is saved, its configured in settings.json in .vscode
 - settings.json updated with autoformat true which uses prettier
 - extensions.json is added for vscode for the recommended extension
