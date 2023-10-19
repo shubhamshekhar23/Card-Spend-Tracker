@@ -1,0 +1,1 @@
+/* All config for prettier config goes here */
