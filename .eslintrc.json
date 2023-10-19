@@ -15,6 +15,7 @@
         "ignoreTrailingComments": true
       }
     ],
+    // sorting imports order
     "simple-import-sort/imports": [
       "error",
       {
