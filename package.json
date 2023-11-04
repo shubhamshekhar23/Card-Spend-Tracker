@@ -9,10 +9,10 @@
     "lint": "next lint",
     "plop": "plop"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npm run lint"
+    ]
   },
   "dependencies": {
     "@iconscout/react-unicons": "^2.0.2",
@@ -29,6 +29,7 @@
     "@types/react": "^18.2.23",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
     "plop": "^4.0.0",
     "typescript": "^5.2.2"
   }
