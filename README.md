@@ -41,8 +41,9 @@ npx plop component my-component
 - eslint fix has been made to run when file is saved, its configured in settings.json in .vscode
 - settings.json updated with autoformat true which uses prettier
 - extensions.json is added for vscode for the recommended extension
-- A sample precommit hook has been added for a message that says to integrate tests.
 - eslint-plugin-simple-import-sort has been added to sort-imports and add a line break; It has been configured in .eslintrs.json
+- A sample precommit hook has been added usingh `husky and lint-staged` to run lint before commit.
+- A `pre-push git hook` also has been added for running unit tests, it just echos tests for now.
 
 ## Future improvemnts
 
