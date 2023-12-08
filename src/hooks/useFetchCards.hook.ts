@@ -6,7 +6,7 @@ import { useGlobalContext } from "@/context/global-context";
 import { getCardsOfUser } from "@/services/card-api.service.ts";
 
 export default function useFetchCards() {
-  const { cardsData, setCardsData }: any = useCardsContext();
+  const { cardsData, setCardsData, manualBalance }: any = useCardsContext();
   const { isLoading, setIsLoading }: any = useGlobalContext();
 
   useEffect(() => {
@@ -21,5 +21,6 @@ export default function useFetchCards() {
 
   return {
     cardsData,
+    manualBalance,
   };
 }

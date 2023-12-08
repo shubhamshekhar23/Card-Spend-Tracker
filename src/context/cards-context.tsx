@@ -4,9 +4,12 @@ export const CardsContext: any = createContext(null);
 
 export default function CardsContextProvider({ children }: any) {
   const [cardsData, setCardsData] = useState([]);
+  const [manualBalance, setManualBalance] = useState(0);
 
   return (
-    <CardsContext.Provider value={{ cardsData, setCardsData }}>
+    <CardsContext.Provider
+      value={{ cardsData, setCardsData, manualBalance, setManualBalance }}
+    >
       {children}
     </CardsContext.Provider>
   );

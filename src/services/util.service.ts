@@ -17,12 +17,14 @@ export function getDateString(timestamp: any) {
 }
 
 export function formattedAmount(amount: any) {
+  const pos = Math.abs(amount);
   const formattedAmount =
     "$" +
-    amount.toLocaleString("en-US", {
+    pos.toLocaleString("en-US", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
+  if (amount < 0) return `- ${formattedAmount}`;
   return formattedAmount;
 }
 

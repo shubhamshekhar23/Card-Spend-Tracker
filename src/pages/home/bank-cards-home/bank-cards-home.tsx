@@ -11,7 +11,7 @@ import styles from "./bank-cards-home.module.scss";
 import { BankCardsTitle } from "./bank-cards-title/bank-cards-title";
 
 export default function BankCardsHome() {
-  const { cardsData } = useFetchCards();
+  const { cardsData, manualBalance } = useFetchCards();
   const [activeCard, setActiveCard] = useState(1);
 
   const router = useRouter();
@@ -21,6 +21,7 @@ export default function BankCardsHome() {
     cardsData?.forEach((item: any) => {
       amount += item.balance;
     });
+    amount += manualBalance;
     return formattedAmount(amount);
   }
 
