@@ -4,7 +4,7 @@ import styles from "./loader.module.scss";
 
 type LoaderPropTypes = {};
 
-export function Loader(props: LoaderPropTypes) {
+export default function Loader(props: LoaderPropTypes) {
   useEffect(() => {}, []);
 
   return (

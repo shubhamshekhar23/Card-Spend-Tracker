@@ -8,16 +8,20 @@ import { AddTransactionButton } from "@/components/add-transaction-button/add-tr
 import { useTransactionHistoryContext } from "@/context/transaction-history-context";
 
 import styles from "./history.module.scss";
+import { useGlobalContext } from "@/context/global-context";
 
 export default function History() {
   const { transactionHistoryData, setTransactionHistoryData }: any =
     useTransactionHistoryContext();
+  const { isLoading, setIsLoading }: any = useGlobalContext();
 
   useEffect(() => {
     async function fetchData() {
+      setIsLoading(true);
       const response = await getTransactionHistory();
       let mapData = arrangeHistoryByDate(response);
       setTransactionHistoryData(mapData);
+      setIsLoading(false);
     }
     fetchData();
   }, []);

@@ -28,12 +28,13 @@ export function AddTransactionButton(props: AddTransactionButtonPropTypes) {
 
   async function onSubmitForm(formData: TransactionForm) {
     const payload = transformIntoTransactionPayload(formData);
+    setIsDialogShow(false);
 
+    setIsLoading(true);
     const response = await saveManualTransaction(payload);
     let mapData = arrangeHistoryByDate(response);
     setTransactionHistoryData(mapData);
-    setIsDialogShow(false);
-    /* write logic to update the state */
+    setIsLoading(false);
   }
 
   return (

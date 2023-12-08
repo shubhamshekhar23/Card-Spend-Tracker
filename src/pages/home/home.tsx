@@ -8,9 +8,12 @@ import Catalogue from "./catalogue/catalogue";
 import History from "./history/history";
 import styles from "./home.module.scss";
 import Menu from "./menu/menu";
+import { useGlobalContext } from "@/context/global-context";
+import Loader from "@/components/loader/loader";
 
 export default function Home() {
   const [activeScreen, setActiveScreen]: any = useState(SCREEN_TYPE.home);
+  const { isLoading, setIsLoading } = useGlobalContext();
 
   const Active_Screen_Map: any = {
     [SCREEN_TYPE.home]: <BankCardsHome />,
@@ -31,6 +34,7 @@ export default function Home() {
       </main>
       {/* footer nav */}
       <FooterNav clickHandler={makeActiveScreen} activeScreen={activeScreen} />
+      {isLoading && <Loader />}
     </>
   );
 }

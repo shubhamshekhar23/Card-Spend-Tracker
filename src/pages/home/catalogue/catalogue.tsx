@@ -6,14 +6,18 @@ import { useCatalogueContext } from "@/context/catalogue.context";
 
 import styles from "./catalogue.module.scss";
 import { CatalogueList } from "./catalogue-list/catalogue-list";
+import { useGlobalContext } from "@/context/global-context";
 
 export default function Catalogue() {
   const { catalogueData, setCatalogueData }: any = useCatalogueContext();
+  const { isLoading, setIsLoading }: any = useGlobalContext();
 
   useEffect(() => {
     async function fetchData() {
+      setIsLoading(true);
       const response = await getDebtCatalogue();
       setCatalogueData(response);
+      setIsLoading(false);
     }
     fetchData();
   }, []);
