@@ -3,6 +3,7 @@ import { debtCatalogueMockData } from "@/mockdata/catalogue.mockdata";
 import { transactionHistoryMockData } from "@/mockdata/transaction-history.mockdata";
 import { cardOneTransactionHistoryMockData } from "@/mockdata/card1-transact-history.mockdata";
 import { cardTwoTransactionHistoryMockData } from "@/mockdata/card2-transact-history.mockdata";
+import { generateRandomId } from "./util.service";
 
 async function mockPromiseDelay(data: any, delay: number) {
   return new Promise((resolve, reject) => {
@@ -31,6 +32,8 @@ export const getTransactionHistoryOfCard = async (id: any) => {
 
 export const saveManualTransaction = async (payload: any) => {
   /* would be a post request and after successful request it would return all data */
+  const id = generateRandomId();
+  payload["id"] = id;
   const result = [payload, ...transactionHistoryMockData];
   return mockPromiseDelay(result, 900);
 };

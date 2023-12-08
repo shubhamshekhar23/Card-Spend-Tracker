@@ -23,6 +23,7 @@ export function HistoryPanel({
         <button className={styles.nav_btn}></button>
       </div>
       <TransactionHistory data={historyData} />
+      <div style={{ height: "50px" }}></div>
     </div>
   );
 }

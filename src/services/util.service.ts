@@ -10,7 +10,10 @@ export function arrangeHistoryByDate(response: any) {
 
 export function getDateString(timestamp: any) {
   let dat = new Date(timestamp);
-  return dat.getDate() + " " + dat.toLocaleString("default", { month: "long" }); // e.g 17 August
+  const dateinNum = dat.getDate(); // e.g 17
+  const monthName = dat.toLocaleString("default", { month: "long" }); // e.g August
+  const year = dat.getFullYear(); // e/g 2022
+  return `${dateinNum} ${monthName}, ${year}`; // e.g 17 August
 }
 
 export function formattedAmount(amount: any) {
@@ -26,4 +29,10 @@ export function formattedAmount(amount: any) {
 /* classArr is e.g [styles.my_class, styles.your_class] */
 export function getClass(classArr: string[] = []) {
   return classArr.join(" ");
+}
+
+export function generateRandomId() {
+  const timestamp = new Date().getTime(); // Get current timestamp
+  const randomSuffix = Math.random().toString(36).substr(2, 5); // Generate a random string
+  return `${timestamp}${randomSuffix}`;
 }

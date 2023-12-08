@@ -1,19 +1,26 @@
 import "@/styles/globals.scss";
 
-import CardsContext from "../context/cards-context";
-import CatalogueContext from "../context/catalogue.context";
-import TransactionHistoryContext from "../context/transaction-history";
+import CardsContextProvider from "../context/cards-context";
+import CatalogueContextProvider from "../context/catalogue.context";
+import TransactionHistoryContextProvider from "../context/transaction-history";
+import GlobalContextProvider from "../context/global-context";
+import { useGlobalContext } from "../context/global-context";
+import { Loader } from "../components/loader/loader";
 
 export default function App({ Component, pageProps }) {
+  // const { isLoading } = useGlobalContext();
   return (
     <>
-      <CardsContext>
-        <CatalogueContext>
-          <TransactionHistoryContext>
-            <Component {...pageProps} />
-          </TransactionHistoryContext>
-        </CatalogueContext>
-      </CardsContext>
+      <GlobalContextProvider>
+        <CardsContextProvider>
+          <CatalogueContextProvider>
+            <TransactionHistoryContextProvider>
+              {/* {isLoading && <Loader />} */}
+              <Component {...pageProps} />
+            </TransactionHistoryContextProvider>
+          </CatalogueContextProvider>
+        </CardsContextProvider>
+      </GlobalContextProvider>
       <div id="modal-root"></div>
     </>
   );

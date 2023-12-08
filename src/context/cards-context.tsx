@@ -1,13 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-export const Cards_data: any = createContext(null);
+export const CardsContext: any = createContext(null);
 
-export default function CardsContext({ children }: any) {
+export default function CardsContextProvider({ children }: any) {
   const [cardsData, setCardsData] = useState([]);
 
   return (
-    <Cards_data.Provider value={{ cardsData, setCardsData }}>
+    <CardsContext.Provider value={{ cardsData, setCardsData }}>
       {children}
-    </Cards_data.Provider>
+    </CardsContext.Provider>
   );
 }
+
+export const useCardsContext: any = () => {
+  return useContext(CardsContext);
+};

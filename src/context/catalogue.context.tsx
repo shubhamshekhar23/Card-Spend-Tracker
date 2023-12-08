@@ -1,13 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-export const Catalogue_Data: any = createContext(null);
+export const CatalogueContext: any = createContext(null);
 
-export default function CatalogueContext({ children }: any) {
+export default function CatalogueContextProvider({ children }: any) {
   const [catalogueData, setCatalogueData] = useState([]);
 
   return (
-    <Catalogue_Data.Provider value={{ catalogueData, setCatalogueData }}>
+    <CatalogueContext.Provider value={{ catalogueData, setCatalogueData }}>
       {children}
-    </Catalogue_Data.Provider>
+    </CatalogueContext.Provider>
   );
 }
+
+export const useCatalogueContext: any = () => {
+  return useContext(CatalogueContext);
+};

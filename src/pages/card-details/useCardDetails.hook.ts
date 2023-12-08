@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import { useRouter } from "next/router";
 
-import { Cards_data } from "@/context/cards-context";
+import { useCardsContext } from "@/context/cards-context";
 import {
   getCardsOfUser,
   getTransactionHistoryOfCard,
@@ -11,7 +11,7 @@ import {
 import { arrangeHistoryByDate } from "@/services/util.service.ts";
 
 export default function useCardDetails() {
-  const { cardsData, setCardsData }: any = useContext(Cards_data);
+  const { cardsData, setCardsData }: any = useCardsContext();
   const [historyData, setHistoryData]: any = useState({});
   const [card, setCard]: any = useState({});
 

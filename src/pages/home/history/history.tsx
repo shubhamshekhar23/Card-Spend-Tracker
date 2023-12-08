@@ -1,21 +1,23 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import TransactionHistory from "@/components/transaction-history/transaction-history";
 import UserImage from "@/components/user-image/user-image";
 import { getTransactionHistory } from "@/services/card-api.service.ts";
 import { arrangeHistoryByDate } from "@/services/util.service.ts";
 import { AddTransactionButton } from "@/components/add-transaction-button/add-transaction-button";
+import { useTransactionHistoryContext } from "@/context/transaction-history";
 
 import styles from "./history.module.scss";
 
 export default function History() {
-  const [historyData, setHistoryData]: any = useState({});
+  const { transactionHistoryData, setTransactionHistoryData }: any =
+    useTransactionHistoryContext();
 
   useEffect(() => {
     async function fetchData() {
       const response = await getTransactionHistory();
       let mapData = arrangeHistoryByDate(response);
-      setHistoryData(mapData);
+      setTransactionHistoryData(mapData);
     }
     fetchData();
   }, []);
@@ -26,7 +28,7 @@ export default function History() {
         <h1>History</h1>
         <UserImage />
       </div>
-      <TransactionHistory data={historyData} isAnimate={true} />
+      <TransactionHistory data={transactionHistoryData} isAnimate={true} />
       <AddTransactionButton />
     </main>
   );

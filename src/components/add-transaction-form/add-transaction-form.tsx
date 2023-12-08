@@ -2,6 +2,16 @@ import React, { useState, useEffect, useRef } from "react";
 
 import styles from "./add-transaction-form.module.scss";
 import TextButton from "../ui/text-button/text-button";
+import { TransactionForm } from "interfaces/transaction.interface";
+
+const INITIAL_FORM_STATE: TransactionForm = {
+  name: "",
+  details: "",
+  transactionDate: "",
+  transactionTime: "",
+  amount: "",
+  transactionType: "debit", // Default value
+};
 
 type AddTransactionFormPropTypes = {
   onCancel: any;
@@ -12,14 +22,7 @@ export function AddTransactionForm({
   onCancel,
   onSubmit,
 }: AddTransactionFormPropTypes) {
-  const [formData, setFormData] = useState({
-    name: "",
-    details: "",
-    transactionDate: "",
-    transactionTime: "",
-    amount: "",
-    transactionType: "debit", // Default value
-  });
+  const [formData, setFormData] = useState(INITIAL_FORM_STATE);
 
   useEffect(() => {}, []);
 
@@ -36,10 +39,7 @@ export function AddTransactionForm({
 
   function handleCancelForm(e: any) {
     onCancel();
-    // e.stopImmediatePropagation();
   }
-
-  function handleSubmitBySubmitBtn() {}
 
   return (
     <main className={styles.add_transaction_form_container}>
@@ -59,7 +59,8 @@ export function AddTransactionForm({
 
         <div className={styles.form_field}>
           <label htmlFor="details">Details:</label>
-          <textarea
+          <input
+            type="text"
             id="details"
             name="details"
             value={formData.details}
@@ -131,12 +132,8 @@ export function AddTransactionForm({
         </div>
         <div className={styles.footer_action}>
           <TextButton onClick={handleCancelForm}>Cancel</TextButton>
-          <TextButton
-            btnType="primary"
-            type="submit"
-            onClick={handleSubmitBySubmitBtn}
-          >
-            Submit
+          <TextButton btnType="primary" type="submit">
+            Save
           </TextButton>
         </div>
       </form>
