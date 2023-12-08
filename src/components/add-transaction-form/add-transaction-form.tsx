@@ -3,6 +3,10 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./add-transaction-form.module.scss";
 import TextButton from "../ui/text-button/text-button";
 import { TransactionForm } from "interfaces/transaction.interface";
+import {
+  getFormatDateFromCurrentDate,
+  getFormatTimeFromCurrentDate,
+} from "@/services/util.service";
 
 const INITIAL_FORM_STATE: TransactionForm = {
   name: "",
@@ -24,7 +28,17 @@ export function AddTransactionForm({
 }: AddTransactionFormPropTypes) {
   const [formData, setFormData] = useState(INITIAL_FORM_STATE);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    applyDefaultTransactionDate();
+  }, []);
+
+  function applyDefaultTransactionDate() {
+    setFormData({
+      ...formData,
+      transactionDate: getFormatDateFromCurrentDate(),
+      transactionTime: getFormatTimeFromCurrentDate(),
+    });
+  }
 
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;
@@ -34,6 +48,7 @@ export function AddTransactionForm({
   const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+    return;
     onSubmit(formData);
   };
 
