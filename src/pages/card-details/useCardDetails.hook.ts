@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import { useRouter } from "next/router";
 
-import { Cards_data } from "@/context/context";
+import { Cards_data } from "@/context/cards-context";
 import {
   getCardsOfUser,
   getTransactionHistoryOfCard,

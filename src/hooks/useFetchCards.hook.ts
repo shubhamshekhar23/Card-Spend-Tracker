@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 
-import { Cards_data } from "@/context/context";
+import { Cards_data } from "@/context/cards-context";
 import { getCardsOfUser } from "@/services/card-api.service.ts";
 
 export default function useFetchCards() {

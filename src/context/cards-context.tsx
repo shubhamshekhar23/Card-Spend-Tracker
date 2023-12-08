@@ -1,8 +1,8 @@
 import { createContext, useState } from "react";
 
-export const Cards_data = createContext(null);
+export const Cards_data: any = createContext(null);
 
-export default function Context({ children }) {
+export default function CardsContext({ children }: any) {
   const [cardsData, setCardsData] = useState([]);
 
   return (

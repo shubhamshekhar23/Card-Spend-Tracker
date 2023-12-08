@@ -1,0 +1,46 @@
+@import "src/styles/common.scss";
+
+.add_transaction_form_container {
+  width: 300px;
+}
+.form_field {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 6px;
+  input,
+  textarea,
+  select {
+    width: 100%;
+    outline: none;
+    height: 25px;
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 6px;
+  }
+}
+
+.form_field_radio_group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  input {
+    width: 25px;
+  }
+}
+
+.footer_action {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  div {
+    width: 120px;
+  }
+}

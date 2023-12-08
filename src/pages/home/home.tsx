@@ -12,20 +12,12 @@ import Menu from "./menu/menu";
 export default function Home() {
   const [activeScreen, setActiveScreen]: any = useState(SCREEN_TYPE.home);
 
-  function getCorrectScreen() {
-    switch (activeScreen) {
-      case SCREEN_TYPE.home:
-        return <BankCardsHome />;
-      case SCREEN_TYPE.catalogue:
-        return <Catalogue />;
-      case SCREEN_TYPE.history:
-        return <History />;
-      case SCREEN_TYPE.menu:
-        return <Menu />;
-      default:
-        break;
-    }
-  }
+  const Active_Screen_Map: any = {
+    [SCREEN_TYPE.home]: <BankCardsHome />,
+    [SCREEN_TYPE.catalogue]: <Catalogue />,
+    [SCREEN_TYPE.history]: <History />,
+    [SCREEN_TYPE.menu]: <Menu />,
+  };
 
   function makeActiveScreen(val: any) {
     setActiveScreen(val);
@@ -35,7 +27,7 @@ export default function Home() {
     <>
       <main className={styles.main}>
         {/* screen choice */}
-        {getCorrectScreen()}
+        {Active_Screen_Map[activeScreen]}
       </main>
       {/* footer nav */}
       <FooterNav clickHandler={makeActiveScreen} activeScreen={activeScreen} />

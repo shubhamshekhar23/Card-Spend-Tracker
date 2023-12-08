@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { useRouter } from "next/router";
 
 import SlideNav from "@/components/ui/slide-nav/slide-nav";
-import { Cards_data } from "@/context/context";
+import { Cards_data } from "@/context/cards-context";
 import useFetchCards from "@/hooks/useFetchCards.hook.ts";
 import { getCardsOfUser } from "@/services/card-api.service.ts";
 import { formattedAmount } from "@/services/util.service.ts";

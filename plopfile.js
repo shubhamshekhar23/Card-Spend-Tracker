@@ -1,7 +1,7 @@
 module.exports = function (plop) {
   const currentWorkingDirectory = process.cwd();
 
-  plop.setGenerator("component", {
+  plop.setGenerator("c", {
     description: "Create a new React TypeScript component",
     prompts: [
       {

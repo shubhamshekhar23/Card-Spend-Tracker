@@ -1,26 +1,28 @@
 import styles from "./text-button.module.scss";
 
 type TextButtonPropTypes = {
-  type?: "primary" | "transparent";
-  children: any;
+  btnType?: "primary" | "transparent";
+  children?: any;
+  onClick?: any;
+  type?: any;
 };
 
 export default function TextButton(props: TextButtonPropTypes) {
-  const { type = "transparent", children } = props;
+  const { btnType = "transparent", children, type = "button" } = props;
 
   function getClassForBtn() {
     let arr = [styles.text_button];
-    if (type == "transparent") {
+    if (btnType == "transparent") {
       arr.push(styles.btn_transparent);
     }
-    if (type == "primary") {
+    if (btnType == "primary") {
       arr.push(styles.btn_primary);
     }
     return arr.join(" ");
   }
 
   return (
-    <button className={getClassForBtn()}>
+    <button type={type} className={getClassForBtn()} onClick={props.onClick}>
       <span>{children}</span>
     </button>
   );
