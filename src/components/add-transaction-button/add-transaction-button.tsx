@@ -9,7 +9,7 @@ import { TransactionForm } from "interfaces/transaction.interface";
 import { transformIntoTransactionPayload } from "./services/form-payload.sewrvice";
 import { saveManualTransaction } from "@/services/card-api.service";
 import { arrangeHistoryByDate } from "@/services/util.service";
-import { useTransactionHistoryContext } from "@/context/transaction-history";
+import { useTransactionHistoryContext } from "@/context/transaction-history-context";
 import { useGlobalContext } from "@/context/global-context";
 
 type AddTransactionButtonPropTypes = {};

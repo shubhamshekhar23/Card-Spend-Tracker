@@ -5,7 +5,7 @@ import UserImage from "@/components/user-image/user-image";
 import { getTransactionHistory } from "@/services/card-api.service.ts";
 import { arrangeHistoryByDate } from "@/services/util.service.ts";
 import { AddTransactionButton } from "@/components/add-transaction-button/add-transaction-button";
-import { useTransactionHistoryContext } from "@/context/transaction-history";
+import { useTransactionHistoryContext } from "@/context/transaction-history-context";
 
 import styles from "./history.module.scss";
 

@@ -2,7 +2,7 @@ import "@/styles/globals.scss";
 
 import CardsContextProvider from "../context/cards-context";
 import CatalogueContextProvider from "../context/catalogue.context";
-import TransactionHistoryContextProvider from "../context/transaction-history";
+import TransactionHistoryContextProvider from "../context/transaction-history-context";
 import GlobalContextProvider from "../context/global-context";
 import { useGlobalContext } from "../context/global-context";
 import { Loader } from "../components/loader/loader";
