@@ -1,7 +1,7 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 import UserImage from "@/components/user-image/user-image";
-import { getDebtCatalogue } from "@/services/card-api.service";
+import { getDebtCatalogue } from "@/services/card-api.service.ts";
 
 import styles from "./catalogue.module.scss";
 import { CatalogueList } from "./catalogue-list/catalogue-list";

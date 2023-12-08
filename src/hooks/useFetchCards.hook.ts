@@ -1,11 +1,11 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { useContext } from "react";
 
 import { Cards_data } from "@/context/context";
-import { getCardsOfUser } from "@/services/card-api.service";
+import { getCardsOfUser } from "@/services/card-api.service.ts";
 
 export default function useFetchCards() {
-  const { cardsData, setCardsData } = useContext(Cards_data);
+  const { cardsData, setCardsData }: any = useContext(Cards_data);
 
   useEffect(() => {
     async function fetchData() {

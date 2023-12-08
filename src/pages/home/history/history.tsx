@@ -1,9 +1,10 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 import TransactionHistory from "@/components/transaction-history/transaction-history";
 import UserImage from "@/components/user-image/user-image";
-import { getTransactionHistory } from "@/services/card-api.service";
-import { arrangeHistoryByDate } from "@/services/util.service";
+import { getTransactionHistory } from "@/services/card-api.service.ts";
+import { arrangeHistoryByDate } from "@/services/util.service.ts";
+import { AddTransactionButton } from "@/components/add-transaction-button/add-transaction-button";
 
 import styles from "./history.module.scss";
 
@@ -26,6 +27,7 @@ export default function History() {
         <UserImage />
       </div>
       <TransactionHistory data={historyData} isAnimate={true} />
+      <AddTransactionButton />
     </main>
   );
 }

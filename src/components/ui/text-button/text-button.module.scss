@@ -1,11 +1,19 @@
 @import "src/styles/common.scss";
 
 .text_button {
-  background-color: transparent;
   border-radius: 10px;
   border: 1px solid $blue-bay;
   padding: 10px 20px;
   color: $blue-malibu;
   font-size: 17px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.btn_transparent {
+  background-color: transparent;
+}
+.btn_primary {
+  background-color: $pink-wisteria;
+  color: white;
 }

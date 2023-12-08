@@ -1,13 +1,13 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { useContext } from "react";
 
 import { useRouter } from "next/router";
 
 import SlideNav from "@/components/ui/slide-nav/slide-nav";
 import { Cards_data } from "@/context/context";
-import useFetchCards from "@/hooks/useFetchCards.hook";
-import { getCardsOfUser } from "@/services/card-api.service";
-import { formattedAmount } from "@/services/util.service";
+import useFetchCards from "@/hooks/useFetchCards.hook.ts";
+import { getCardsOfUser } from "@/services/card-api.service.ts";
+import { formattedAmount } from "@/services/util.service.ts";
 
 import { BankCards } from "./bank-cards/bank-cards";
 import styles from "./bank-cards-home.module.scss";

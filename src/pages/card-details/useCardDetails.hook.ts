@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { useContext } from "react";
 
 import { useRouter } from "next/router";
@@ -7,8 +7,8 @@ import { Cards_data } from "@/context/context";
 import {
   getCardsOfUser,
   getTransactionHistoryOfCard,
-} from "@/services/card-api.service";
-import { arrangeHistoryByDate } from "@/services/util.service";
+} from "@/services/card-api.service.ts";
+import { arrangeHistoryByDate } from "@/services/util.service.ts";
 
 export default function useCardDetails() {
   const { cardsData, setCardsData }: any = useContext(Cards_data);

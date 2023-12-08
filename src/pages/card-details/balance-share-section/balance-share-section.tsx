@@ -1,6 +1,6 @@
 import { UilHistory, UilShare } from "@iconscout/react-unicons";
 
-import { formattedAmount } from "@/services/util.service";
+import { formattedAmount } from "@/services/util.service.ts";
 import SquareButton from "@/ui/square-button/square-button";
 
 import styles from "../card-details.module.scss";

@@ -1,4 +1,4 @@
-import { formattedAmount } from "@/services/util.service";
+import { formattedAmount } from "@/services/util.service.ts";
 
 import styles from "../transaction-history.module.scss";
 import { TransactionTypeButton } from "../transaction-type-button/transaction-type-button";

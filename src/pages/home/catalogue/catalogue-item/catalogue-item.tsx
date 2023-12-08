@@ -1,4 +1,4 @@
-import { formattedAmount } from "@/services/util.service";
+import { formattedAmount } from "@/services/util.service.ts";
 import TextButton from "@/ui/text-button/text-button";
 
 import styles from "../catalogue.module.scss";
