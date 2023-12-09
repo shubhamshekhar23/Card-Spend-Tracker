@@ -10,10 +10,14 @@
     "plop": "plop",
     "test": "jest"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
+  },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "npm run lint",
-      "npm run test"
+      "npm run lint"
     ]
   },
   "dependencies": {
