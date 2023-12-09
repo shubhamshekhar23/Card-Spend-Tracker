@@ -52,8 +52,8 @@ export default function FooterNav({
         className={getClassNamesForIcon(SCREEN_TYPE.history)}
       />
       <UilBars
-        onClick={() => handleClick(SCREEN_TYPE.menu)}
-        className={getClassNamesForIcon(SCREEN_TYPE.menu)}
+        onClick={() => handleClick(SCREEN_TYPE.expense_overview)}
+        className={getClassNamesForIcon(SCREEN_TYPE.expense_overview)}
       />
     </div>
   );

@@ -6,8 +6,8 @@ import { SCREEN_TYPE } from "@/constants/screen.constants";
 import BankCardsHome from "@/features/card/components/bank-cards-home/bank-cards-home";
 import Catalogue from "@/features/debt-catalogue/components/catalogue/catalogue";
 import TransactionHistoryScreen from "@/features/transaction/components/transaction-history-screen/transaction-history-screen";
+import { ExpenseOverviewScreen } from "@/features/expense-overview/components/expense-overview-screen/expense-overview-screen";
 import styles from "./home.module.scss";
-import Menu from "./menu/menu";
 import { useGlobalContext } from "@/context/global-context";
 import Loader from "@/components/loader/loader";
 
@@ -19,7 +19,7 @@ export default function Home() {
     [SCREEN_TYPE.home]: <BankCardsHome />,
     [SCREEN_TYPE.catalogue]: <Catalogue />,
     [SCREEN_TYPE.history]: <TransactionHistoryScreen />,
-    [SCREEN_TYPE.menu]: <Menu />,
+    [SCREEN_TYPE.expense_overview]: <ExpenseOverviewScreen />,
   };
 
   function makeActiveScreen(val: any) {
