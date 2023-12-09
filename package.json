@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "plop": "plop",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@iconscout/react-unicons": "^2.0.2",
@@ -41,11 +42,6 @@
     "plop": "^4.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.2.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm run test"
-    }
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
