@@ -33,6 +33,7 @@
 - Plop has been updated for the support of test files
 - Now running `npx plop c my-component` will create test file as well
 - husky pre-commit is updated to support running of tests before commiting the changes
+- docs folder have been added to maintain code-guidelines related info and release notes
 
 ### Further features and improvements
 
