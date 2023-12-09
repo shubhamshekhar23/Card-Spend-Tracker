@@ -5,7 +5,10 @@ type CardBackViewPropTypes = {
   data: any;
 };
 
-export function CardBackView({ onPointerUp, data }: CardBackViewPropTypes) {
+export default function CardBackView({
+  onPointerUp,
+  data,
+}: CardBackViewPropTypes) {
   return (
     <div onPointerUp={onPointerUp}>
       {/* strip */}

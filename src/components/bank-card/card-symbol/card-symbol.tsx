@@ -3,7 +3,7 @@ import Image from "next/image";
 import contactless from "../../../assets/contactless.svg";
 import styles from "../bank-card.module.scss";
 
-export function CardSymbol() {
+export default function CardSymbol() {
   return (
     <div className={styles.card_symbol_section}>
       <span className={styles.card_square}></span>

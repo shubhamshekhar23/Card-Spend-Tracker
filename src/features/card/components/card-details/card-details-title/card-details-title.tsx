@@ -8,7 +8,7 @@ type CardDetailsTitlePropTypes = {
   sliderPosition: Number;
 };
 
-export function CardDetailsTitle({
+export default function CardDetailsTitle({
   back = () => {},
   sliderPosition = 0,
 }: CardDetailsTitlePropTypes) {

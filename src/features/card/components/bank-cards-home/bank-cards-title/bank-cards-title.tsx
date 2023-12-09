@@ -6,7 +6,7 @@ type BankCardsTitlePropTypes = {
   getAmount: () => any;
 };
 
-export function BankCardsTitle({
+export default function BankCardsTitle({
   getAmount = () => {},
 }: BankCardsTitlePropTypes) {
   return (

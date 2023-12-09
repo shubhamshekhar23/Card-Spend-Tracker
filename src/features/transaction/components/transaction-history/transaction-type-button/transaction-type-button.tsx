@@ -1,4 +1,4 @@
-import { UilCar, UilMusicNote,UilShare } from "@iconscout/react-unicons";
+import { UilCar, UilMusicNote, UilShare } from "@iconscout/react-unicons";
 
 import { TRANSACTION_TYPE } from "@/constants/entity.constants";
 import RoundPill from "@/ui/round-pill/round-pill";
@@ -7,7 +7,7 @@ type TransactionTypeButtonPropTypes = {
   type: number;
 };
 
-export function TransactionTypeButton({
+export default function TransactionTypeButton({
   type = 1,
 }: TransactionTypeButtonPropTypes) {
   const btnMap: { [key: number]: any } = {

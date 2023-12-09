@@ -5,7 +5,7 @@ import TextButton from "@/components/ui/text-button/text-button";
 
 type DebtPayButtonPropTypes = {};
 
-export function DebtPayButton(props: DebtPayButtonPropTypes) {
+export default function DebtPayButton(props: DebtPayButtonPropTypes) {
   const [state, setState] = useState({});
 
   useEffect(() => {}, []);

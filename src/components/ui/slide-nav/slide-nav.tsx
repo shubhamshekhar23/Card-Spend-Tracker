@@ -1,4 +1,4 @@
-import { ChildButtons } from "./child-buttons/child-buttons";
+import ChildButtons from "./child-buttons/child-buttons";
 import styles from "./slide-nav.module.scss";
 
 type SlideNavPropTypes = {

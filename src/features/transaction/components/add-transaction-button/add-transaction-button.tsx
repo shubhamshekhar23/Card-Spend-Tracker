@@ -4,7 +4,7 @@ import styles from "./add-transaction-button.module.scss";
 
 import TextButton from "@/ui/text-button/text-button";
 import Dialog from "@/components/dialog/dialog";
-import { AddTransactionForm } from "../add-transaction-form/add-transaction-form";
+import AddTransactionForm from "../add-transaction-form/add-transaction-form";
 import {
   TransactionForm,
   TransactionSubmitPayload,
@@ -18,7 +18,9 @@ import { useCardsContext } from "@/context/cards-context";
 
 type AddTransactionButtonPropTypes = {};
 
-export function AddTransactionButton(props: AddTransactionButtonPropTypes) {
+export default function AddTransactionButton(
+  props: AddTransactionButtonPropTypes
+) {
   const [isDialogShow, setIsDialogShow] = useState(false);
   const { manualBalance, setManualBalance }: any = useCardsContext();
 

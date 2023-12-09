@@ -9,7 +9,7 @@ type HistoryPanelPropTypes = {
   sliderButtonClick: () => void;
 };
 
-export function HistoryPanel({
+export default function HistoryPanel({
   historyData = {},
   sliderPosition = 0,
   sliderButtonClick = () => {},

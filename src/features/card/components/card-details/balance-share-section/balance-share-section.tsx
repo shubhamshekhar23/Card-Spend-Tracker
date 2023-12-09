@@ -9,7 +9,7 @@ type BalanceShareSectionPropTypes = {
   card: any;
 };
 
-export function BalanceShareSection({
+export default function BalanceShareSection({
   card = {},
 }: BalanceShareSectionPropTypes) {
   return (

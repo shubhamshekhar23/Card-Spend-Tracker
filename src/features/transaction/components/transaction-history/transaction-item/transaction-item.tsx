@@ -1,13 +1,15 @@
 import { formattedAmount } from "@/services/util.service.ts";
 
 import styles from "../transaction-history.module.scss";
-import { TransactionTypeButton } from "../transaction-type-button/transaction-type-button";
+import TransactionTypeButton from "../transaction-type-button/transaction-type-button";
 
 type TransactionItemPropTypes = {
   data: any;
 };
 
-export function TransactionItem({ data = {} }: TransactionItemPropTypes) {
+export default function TransactionItem({
+  data = {},
+}: TransactionItemPropTypes) {
   function getFormatAmount(amount: any, info: any) {
     let str = formattedAmount(amount);
     if (info == "debit") {

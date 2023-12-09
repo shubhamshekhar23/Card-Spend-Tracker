@@ -1,10 +1,10 @@
-import { CatalogueItem } from "../catalogue-item/catalogue-item";
+import CatalogueItem from "../catalogue-item/catalogue-item";
 
 type CatalogueListPropTypes = {
   data: Array<any>;
 };
 
-export function CatalogueList({ data = [] }: CatalogueListPropTypes) {
+export default function CatalogueList({ data = [] }: CatalogueListPropTypes) {
   function getList() {
     return (
       data &&

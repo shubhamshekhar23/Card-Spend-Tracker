@@ -4,7 +4,9 @@ import styles from "./expense-overview-screen.module.scss";
 
 type ExpenseOverviewScreenPropTypes = {};
 
-export function ExpenseOverviewScreen(props: ExpenseOverviewScreenPropTypes) {
+export default function ExpenseOverviewScreen(
+  props: ExpenseOverviewScreenPropTypes
+) {
   const [state, setState] = useState({});
 
   useEffect(() => {}, []);

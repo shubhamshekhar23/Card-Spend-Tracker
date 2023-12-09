@@ -1,17 +1,17 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useRouter } from "next/router";
 
 import BankCard from "@/components/bank-card/bank-card";
 
-import { BalanceShareSection } from "./balance-share-section/balance-share-section";
+import BalanceShareSection from "./balance-share-section/balance-share-section";
 import styles from "./card-details.module.scss";
-import { CardDetailsTitle } from "./card-details-title/card-details-title";
+import CardDetailsTitle from "./card-details-title/card-details-title";
 import {
   classForBalanceShareSection,
   classForTitle,
 } from "./class-provider.service";
-import { HistoryPanel } from "./history-panel/history-panel";
+import HistoryPanel from "./history-panel/history-panel";
 import useCardDetails from "./useCardDetails.hook";
 
 export default function CardDetails() {

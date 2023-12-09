@@ -1,4 +1,4 @@
-import { TransactionByDate } from "./transaction-by-date/transaction-by-date";
+import TransactionByDate from "./transaction-by-date/transaction-by-date";
 import styles from "./transaction-history.module.scss";
 
 type TransactionHistoryPropTypes = {

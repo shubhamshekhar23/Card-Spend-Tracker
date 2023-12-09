@@ -13,7 +13,7 @@ type CatalogueTypeButtonPropTypes = {
   type: number;
 };
 
-export function CatalogueTypeButton({
+export default function CatalogueTypeButton({
   type = 5,
 }: CatalogueTypeButtonPropTypes) {
   const btnMap: { [key: number]: any } = {

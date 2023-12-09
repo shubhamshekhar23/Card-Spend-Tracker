@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { CardBackView } from "./card-back-view/card-back-view";
-import { CardFrontView } from "./card-front-view/card-front-view";
+import CardBackView from "./card-back-view/card-back-view";
+import CardFrontView from "./card-front-view/card-front-view";
 import { getClassNamesForCard } from "./class-provider.service";
 
 type BankCardPropTypes = {

@@ -1,12 +1,12 @@
 import styles from "../transaction-history.module.scss";
-import { TransactionItem } from "../transaction-item/transaction-item";
+import TransactionItem from "../transaction-item/transaction-item";
 
 type TransactionListPropTypes = {
   data: Array<any>;
   isAnimate: Boolean;
 };
 
-export function TransactionList({
+export default function TransactionList({
   data = [],
   isAnimate = false,
 }: TransactionListPropTypes) {

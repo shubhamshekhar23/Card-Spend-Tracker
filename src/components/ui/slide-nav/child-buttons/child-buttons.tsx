@@ -6,7 +6,7 @@ type ChildButtonsPropTypes = {
   handleNavClick?: (params: any) => void;
 };
 
-export function ChildButtons({
+export default function ChildButtons({
   num = 1,
   active = 1,
   handleNavClick = () => {},

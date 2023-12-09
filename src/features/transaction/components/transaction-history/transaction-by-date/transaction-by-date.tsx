@@ -1,12 +1,12 @@
 import styles from "../transaction-history.module.scss";
-import { TransactionList } from "../transaction-list/transaction-list";
+import TransactionList from "../transaction-list/transaction-list";
 
 type TransactionByDatePropTypes = {
   data: any;
   isAnimate: Boolean;
 };
 
-export function TransactionByDate({
+export default function TransactionByDate({
   data = {},
   isAnimate = false,
 }: TransactionByDatePropTypes) {

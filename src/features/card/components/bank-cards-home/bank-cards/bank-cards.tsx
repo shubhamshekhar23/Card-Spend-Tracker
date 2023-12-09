@@ -8,7 +8,10 @@ type BankCardsPropTypes = {
 };
 
 /* internal compoennts */
-export function BankCards({ cards = [], routerPush = (param: any) => {} }) {
+export default function BankCards({
+  cards = [],
+  routerPush = (param: any) => {},
+}) {
   return (
     <div className={styles.card_container}>
       {cards.map((item: any) => (

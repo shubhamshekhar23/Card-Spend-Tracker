@@ -6,9 +6,9 @@ import SlideNav from "@/components/ui/slide-nav/slide-nav";
 import useFetchCards from "@/hooks/useFetchCards.hook.ts";
 import { formattedAmount } from "@/services/util.service.ts";
 
-import { BankCards } from "./bank-cards/bank-cards";
+import BankCards from "./bank-cards/bank-cards";
 import styles from "./bank-cards-home.module.scss";
-import { BankCardsTitle } from "./bank-cards-title/bank-cards-title";
+import BankCardsTitle from "./bank-cards-title/bank-cards-title";
 
 export default function BankCardsHome() {
   const { cardsData, manualBalance } = useFetchCards();

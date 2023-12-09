@@ -6,7 +6,7 @@ import { SCREEN_TYPE } from "@/constants/screen.constants";
 import BankCardsHome from "@/features/card/components/bank-cards-home/bank-cards-home";
 import Catalogue from "@/features/debt-catalogue/components/catalogue/catalogue";
 import TransactionHistoryScreen from "@/features/transaction/components/transaction-history-screen/transaction-history-screen";
-import { ExpenseOverviewScreen } from "@/features/expense-overview/components/expense-overview-screen/expense-overview-screen";
+import ExpenseOverviewScreen from "@/features/expense-overview/components/expense-overview-screen/expense-overview-screen";
 import styles from "./home.module.scss";
 import { useGlobalContext } from "@/context/global-context";
 import Loader from "@/components/loader/loader";

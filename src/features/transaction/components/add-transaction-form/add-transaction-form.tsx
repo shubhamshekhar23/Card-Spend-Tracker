@@ -22,7 +22,7 @@ type AddTransactionFormPropTypes = {
   onSubmit: any;
 };
 
-export function AddTransactionForm({
+export default function AddTransactionForm({
   onCancel,
   onSubmit,
 }: AddTransactionFormPropTypes) {

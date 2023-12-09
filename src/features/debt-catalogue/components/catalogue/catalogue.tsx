@@ -5,7 +5,7 @@ import { getDebtCatalogue } from "@/services/card-api.service.ts";
 import { useCatalogueContext } from "@/context/catalogue.context";
 
 import styles from "./catalogue.module.scss";
-import { CatalogueList } from "./catalogue-list/catalogue-list";
+import CatalogueList from "./catalogue-list/catalogue-list";
 import { useGlobalContext } from "@/context/global-context";
 
 export default function Catalogue() {

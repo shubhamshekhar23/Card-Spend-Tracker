@@ -4,7 +4,7 @@ type CardTitlePropTypes = {
   data: any;
 };
 
-export function CardTitle({ data = {} }: CardTitlePropTypes) {
+export default function CardTitle({ data = {} }: CardTitlePropTypes) {
   return (
     <div className={styles.card_heading_section}>
       <span className={styles.card_abbv}>{data?.info?.abbv}</span>
