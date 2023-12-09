@@ -28,6 +28,7 @@
   - Loader has been added when the data is being loaded in the ui
   - mockdata is improved as well.
 - `Jest support` for unit testing has been added
+- One Unit test has been added for componnet `src/components/ui/text-button/text-button.tsx`
 - Initial Test files have been added for all the components
 - Plop has been updated for the support of test files
 - Now running `npx plop c my-component` will create test file as well
