@@ -27,7 +27,7 @@
 - Mocking api have been improved with some delay to replicate the real life scenario
   - Loader has been added when the data is being loaded in the ui
   - mockdata is improved as well.
-- `Jest support` for unit testing has been added
+- `Jest support` for unit testing has been added; `npm run test` will run all the tests
 - One Unit test has been added for componnet `src/components/ui/text-button/text-button.tsx`
 - Initial Test files have been added for all the components
 - Plop has been updated for the support of test files
