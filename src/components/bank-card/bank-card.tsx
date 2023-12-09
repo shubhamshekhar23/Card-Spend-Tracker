@@ -4,7 +4,6 @@ import CardBackView from "./card-back-view/card-back-view";
 import CardFrontView from "./card-front-view/card-front-view";
 import { getClassNamesForCard } from "./class-provider.service";
 
-/* just testing */
 type BankCardPropTypes = {
   data: any;
   isBackPreview?: Boolean;
