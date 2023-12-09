@@ -14,8 +14,8 @@ const nextConfig = {
         destination: "/ui-story/ui-story",
       },
       {
-        source: "/card-details",
-        destination: "/card-details/card-details",
+        source: "/card-info",
+        destination: "/card-info/card-info",
       },
     ];
   },

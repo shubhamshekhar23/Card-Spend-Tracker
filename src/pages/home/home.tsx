@@ -3,9 +3,9 @@ import { useState } from "react";
 import FooterNav from "@/components/footer-nav/footer-nav";
 import { SCREEN_TYPE } from "@/constants/screen.constants";
 
-import BankCardsHome from "./bank-cards-home/bank-cards-home";
-import Catalogue from "./catalogue/catalogue";
-import History from "./history/history";
+import BankCardsHome from "@/features/card/components/bank-cards-home/bank-cards-home";
+import Catalogue from "@/features/debt-catalogue/components/catalogue/catalogue";
+import History from "@/features/transaction/components/history/history";
 import styles from "./home.module.scss";
 import Menu from "./menu/menu";
 import { useGlobalContext } from "@/context/global-context";

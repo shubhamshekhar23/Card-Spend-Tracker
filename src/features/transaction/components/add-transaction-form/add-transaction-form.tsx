@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import styles from "./add-transaction-form.module.scss";
-import TextButton from "../ui/text-button/text-button";
+import TextButton from "@/ui/text-button/text-button";
 import { TransactionForm } from "interfaces/transaction.interface";
 import {
   getFormatDateFromCurrentDate,
@@ -48,7 +48,6 @@ export function AddTransactionForm({
   const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    return;
     onSubmit(formData);
   };
 

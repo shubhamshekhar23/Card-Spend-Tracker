@@ -9,7 +9,8 @@
       "@/services/*": ["services/*"],
       "@/mockdata/*": ["data/mockdata/*"],
       "@/hooks/*": ["hooks/*"],
-      "@/context/*": ["context/*"]
+      "@/context/*": ["context/*"],
+      "@/features/*": ["features/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

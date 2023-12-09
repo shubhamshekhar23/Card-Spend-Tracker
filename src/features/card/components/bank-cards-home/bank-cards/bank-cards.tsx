@@ -16,7 +16,7 @@ export function BankCards({ cards = [], routerPush = (param: any) => {} }) {
           <BankCard
             onClick={() =>
               routerPush({
-                pathname: "/card-details",
+                pathname: "/card-info",
                 query: {
                   id: item.id,
                 },
