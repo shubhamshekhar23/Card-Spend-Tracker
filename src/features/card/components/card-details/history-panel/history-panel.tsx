@@ -1,4 +1,4 @@
-import TransactionHistory from "@/components/transaction-history/transaction-history";
+import TransactionHistory from "@/features/transaction/components/transaction-history/transaction-history";
 
 import styles from "../card-details.module.scss";
 import { classForSliderPanel } from "../class-provider.service";

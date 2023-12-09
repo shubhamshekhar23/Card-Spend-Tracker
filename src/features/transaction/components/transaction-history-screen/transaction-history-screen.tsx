@@ -1,16 +1,16 @@
 import { useContext, useEffect, useState } from "react";
 
-import TransactionHistory from "@/components/transaction-history/transaction-history";
+import TransactionHistory from "../transaction-history/transaction-history";
 import UserImage from "@/components/user-image/user-image";
 import { getTransactionHistory } from "@/services/card-api.service.ts";
 import { arrangeHistoryByDate } from "@/services/util.service.ts";
 import { AddTransactionButton } from "../add-transaction-button/add-transaction-button";
 import { useTransactionHistoryContext } from "@/context/transaction-history-context";
 
-import styles from "./history.module.scss";
+import styles from "./transaction-history-screen.module.scss";
 import { useGlobalContext } from "@/context/global-context";
 
-export default function History() {
+export default function TransactionHistoryScreen() {
   const { transactionHistoryData, setTransactionHistoryData }: any =
     useTransactionHistoryContext();
   const { isLoading, setIsLoading }: any = useGlobalContext();

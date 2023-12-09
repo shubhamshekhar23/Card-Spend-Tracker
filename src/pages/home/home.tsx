@@ -5,7 +5,7 @@ import { SCREEN_TYPE } from "@/constants/screen.constants";
 
 import BankCardsHome from "@/features/card/components/bank-cards-home/bank-cards-home";
 import Catalogue from "@/features/debt-catalogue/components/catalogue/catalogue";
-import History from "@/features/transaction/components/history/history";
+import TransactionHistoryScreen from "@/features/transaction/components/transaction-history-screen/transaction-history-screen";
 import styles from "./home.module.scss";
 import Menu from "./menu/menu";
 import { useGlobalContext } from "@/context/global-context";
@@ -18,7 +18,7 @@ export default function Home() {
   const Active_Screen_Map: any = {
     [SCREEN_TYPE.home]: <BankCardsHome />,
     [SCREEN_TYPE.catalogue]: <Catalogue />,
-    [SCREEN_TYPE.history]: <History />,
+    [SCREEN_TYPE.history]: <TransactionHistoryScreen />,
     [SCREEN_TYPE.menu]: <Menu />,
   };
 
