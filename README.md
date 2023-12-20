@@ -1,3 +1,7 @@
+# Card Spend Tracker (In React.js)
+
+![Project preview](docs/preview.gif)
+
 ## How to run this app
 
 - First do `npm install`
