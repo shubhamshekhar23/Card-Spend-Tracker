@@ -46,6 +46,12 @@
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 600px) {
+  .nav_container {
+    display: none;
+  }
+}
+
 @media screen and (max-height: 850px) {
   .card_container {
     display: flex;
@@ -62,6 +68,7 @@
 }
 
 .bank_card {
+  cursor: pointer;
 }
 
 .smoothly_appear {

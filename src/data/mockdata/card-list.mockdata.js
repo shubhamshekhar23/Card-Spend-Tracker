@@ -2,7 +2,7 @@ export const bankCardListMockData = [
   {
     id: 1,
     cardTitle: "Salary Card",
-    balance: 2748,
+    balance: 2500,
     info: {
       abbv: "CB",
       bankName: "Universal Bank",

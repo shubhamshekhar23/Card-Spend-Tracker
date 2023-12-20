@@ -18,9 +18,13 @@ export default function TransactionHistoryScreen() {
   useEffect(() => {
     async function fetchData() {
       setIsLoading(true);
-      const response = await getTransactionHistory();
-      let mapData = arrangeHistoryByDate(response);
-      setTransactionHistoryData(mapData);
+      const isDataAbsent =
+        transactionHistoryData && transactionHistoryData.length === 0;
+      if (isDataAbsent) {
+        const response = await getTransactionHistory();
+        let mapData = arrangeHistoryByDate(response);
+        setTransactionHistoryData(mapData);
+      }
       setIsLoading(false);
     }
     fetchData();

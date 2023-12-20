@@ -20,6 +20,7 @@ export default function CardDetailsTitle({
           onClick={() => back()}
           height={40}
           width={40}
+          style={{ cursor: "pointer" }}
         />
       </span>
       <h3 className={classForTitle(sliderPosition)}>Salary Card</h3>

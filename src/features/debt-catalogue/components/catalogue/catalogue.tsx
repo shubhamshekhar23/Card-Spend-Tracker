@@ -26,7 +26,7 @@ export default function Catalogue() {
     <main className={styles.smoothly_appear}>
       <div className={styles.catalogue_container}>
         <div className={styles.screen_title}>
-          <h1>Catalogue</h1>
+          <h1>My Debts</h1>
           <UserImage />
         </div>
         <CatalogueList data={catalogueData} />
