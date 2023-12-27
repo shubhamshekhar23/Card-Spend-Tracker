@@ -24,7 +24,6 @@
 ## About Application
 
 - This application has been named as card-spend-tracker and is based on react.js and next.js
-- It is based on the design https://tinyurl.com/58jbavat
 - It has a responsive design and is suitable for all screen sizes (width > 320px and height > 660px)
 - It uses typescript and sass modules
 - It uses mockdata present in `src/data/mockdata` and is returned from api service and is consumed by components
