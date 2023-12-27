@@ -1,5 +1,3 @@
-import { UilEstate } from "@iconscout/react-unicons";
-
 import styles from "./round-pill.module.scss";
 
 type RoundPillPropTypes = {

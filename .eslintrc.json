@@ -19,7 +19,7 @@
     ],
     // sorting imports order
     "simple-import-sort/imports": [
-      "error",
+      "warn",
       {
         "groups": [["^react"], ["^antd"], ["^@?\\w"], ["@/(.*)"], ["^[./]"]]
       }
