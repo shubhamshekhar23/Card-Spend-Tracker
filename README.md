@@ -1,6 +1,7 @@
 # Card Spend Tracker (In React.js)
 
-![Project preview](docs/preview.gif)
+- `Live` : <https://shubhamshekhar23.github.io/Card-Spend-Tracker-React/>
+  ![Project preview](docs/preview.gif)
 
 ## How to run this app
 
