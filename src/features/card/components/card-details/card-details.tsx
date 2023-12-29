@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { useRouter } from "next/router";
+import { useNavigate } from "react-router-dom";
 
 import BankCard from "@/components/bank-card/bank-card";
 
@@ -17,7 +17,7 @@ import useCardDetails from "./useCardDetails.hook";
 export default function CardDetails() {
   const [sliderPosition, setSliderPosition] = useState(-1); // can hahve 0,1,2
   const { historyData, card } = useCardDetails();
-  const router = useRouter();
+  const navigate = useNavigate();
 
   function sliderButtonClick() {
     if (sliderPosition == -1) setSliderPosition(1);
@@ -30,7 +30,7 @@ export default function CardDetails() {
       {/* header section */}
       <CardDetailsTitle
         sliderPosition={sliderPosition}
-        back={router.back}
+        back={() => navigate(-1)}
       ></CardDetailsTitle>
 
       {/* title */}

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import mastercard from "../../../assets/mastercard.svg";
 import styles from "../bank-card.module.scss";
 
@@ -12,8 +10,8 @@ export default function CardFooter({ data = {} }: CardFooterPropTypes) {
     <div className={styles.card_footer}>
       <span className={styles.card_bank_name}>{data?.info?.expiry}</span>
       <div>
-        <Image
-          priority
+        <img
+          // priority
           className={styles.card_logo}
           src={mastercard}
           alt="mastercard logo"

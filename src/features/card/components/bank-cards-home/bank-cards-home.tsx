@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { useRouter } from "next/router";
-
+import { useNavigate } from "react-router-dom";
 import SlideNav from "@/components/ui/slide-nav/slide-nav";
 import useFetchCards from "@/hooks/useFetchCards.hook.ts";
 import { formattedAmount } from "@/services/util.service.ts";
@@ -14,7 +13,7 @@ export default function BankCardsHome() {
   const { cardsData, manualBalance } = useFetchCards();
   const [activeCard, setActiveCard] = useState(1);
 
-  const router = useRouter();
+  const navigate = useNavigate();
 
   function getAmount() {
     let amount = 0;
@@ -39,7 +38,7 @@ export default function BankCardsHome() {
   return (
     <main className={styles.smoothly_appear}>
       <BankCardsTitle getAmount={getAmount}></BankCardsTitle>
-      <BankCards cards={cardsData} routerPush={router.push}></BankCards>
+      <BankCards cards={cardsData} routerPush={navigate}></BankCards>
       <SlideNav
         className={styles.nav_container}
         num={cardsData?.length}

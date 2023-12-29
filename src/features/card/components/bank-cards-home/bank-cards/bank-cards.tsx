@@ -17,14 +17,7 @@ export default function BankCards({
       {cards.map((item: any) => (
         <div key={item.id} className={styles.bank_card_item}>
           <BankCard
-            onClick={() =>
-              routerPush({
-                pathname: "/card-info",
-                query: {
-                  id: item.id,
-                },
-              })
-            }
+            onClick={() => routerPush(`/card-info?id=${item.id}`)}
             className={styles.bank_card}
             data={item}
             isVertical={true}

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "src/",
+    "baseUrl": "./src",
     "paths": {
       "@/components/*": ["components/*"],
       "@/ui/*": ["components/ui/*"],
@@ -25,20 +25,14 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "allowImportingTsExtensions": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts",
     "typings.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/**/*.scss"
+    "src/**/*.scss",
+    "craco.config.js"
   ],
   "exclude": ["node_modules"]
 }

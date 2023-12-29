@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import styles from "./card-info.module.scss";
 
-import CardDetails from "@/features/card/components/card-details/card-details";
+import CardDetails from "../../features/card/components/card-details/card-details";
 
 type CardInfoPropTypes = {};
 
