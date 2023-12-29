@@ -16,7 +16,7 @@ export default function BankCardsTitle({
         <UserImage />
       </div>
       <h1>Cards</h1>
-      <h5>Balance</h5>
+      <h5>Balance :</h5>
       <h2>{getAmount()}</h2>
     </div>
   );
