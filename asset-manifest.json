@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Card-Spend-Tracker-React/static/css/main.156fca72.css",
-    "main.js": "/Card-Spend-Tracker-React/static/js/main.e1c0ba9b.js",
+    "main.js": "/Card-Spend-Tracker-React/static/js/main.855710c0.js",
     "static/media/contactless.svg": "/Card-Spend-Tracker-React/static/media/contactless.a127b729afdef97eeff3f8d2653dc94c.svg",
     "index.html": "/Card-Spend-Tracker-React/index.html",
     "static/media/mastercard.svg": "/Card-Spend-Tracker-React/static/media/mastercard.25350e288da9a9ef7328a4fb6d012ed7.svg",
     "main.156fca72.css.map": "/Card-Spend-Tracker-React/static/css/main.156fca72.css.map",
-    "main.e1c0ba9b.js.map": "/Card-Spend-Tracker-React/static/js/main.e1c0ba9b.js.map"
+    "main.855710c0.js.map": "/Card-Spend-Tracker-React/static/js/main.855710c0.js.map"
   },
   "entrypoints": [
     "static/css/main.156fca72.css",
-    "static/js/main.e1c0ba9b.js"
+    "static/js/main.855710c0.js"
   ]
 }
