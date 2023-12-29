@@ -18,7 +18,10 @@ import Home from "./pages/home/home";
 import UiStory from "./pages/ui-story/ui-story";
 
 const router = createBrowserRouter([
-  { path: "/", element: <Navigate to="/home" replace /> },
+  {
+    path: "/Card-Spend-Tracker-React",
+    element: <Navigate to="/home" replace />,
+  },
   { path: "/home", element: <Home /> },
   { path: "/card-info", element: <CardInfo /> },
   { path: "/ui-story", element: <UiStory /> },

@@ -1,7 +1,14 @@
 {
+  "homepage": "https://shubhamshekhar23.github.io/Card-Spend-Tracker-React",
   "name": "card-spend-tracker-cra",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject"
+  },
   "dependencies": {
     "@iconscout/react-unicons": "^2.0.2",
     "@testing-library/jest-dom": "^5.17.0",
@@ -42,12 +49,6 @@
     "lint-staged": "^15.0.2",
     "plop": "^4.0.0",
     "ts-node": "^10.9.2"
-  },
-  "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": [
